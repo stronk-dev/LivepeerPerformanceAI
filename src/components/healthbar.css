@@ -1,0 +1,200 @@
+/* Updated CSS for healthbar */
+
+.health-bar-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Increased minimum width for wider elements */
+  gap: 1.4em; /* Added gap between cells for better separation */
+  width: 100%;
+  padding: 0.8em; /* Reduced padding for compactness */
+  box-sizing: border-box;
+  justify-items: center;
+}
+
+.model-wrapper-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em; /* Reduce gap to make the grid tighter */
+  max-width: 420px; /* Slightly increased max width */
+  margin: 0 auto;
+  border: 1px solid var(--dark);
+  border-radius: 0.3em;
+  position: relative;
+  padding: 0.8em; /* Reduced padding */
+  z-index: 1;
+  overflow: visible;
+  box-shadow: rgba(40, 44, 52, 0.5) 2px 4px 6px 2px;
+}
+
+.model-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  border-radius: 0.2em;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: all 0.5s ease; /* Smooth transition for hover and expanded effects */
+}
+
+.model-wrapper.hovered {
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  transition: all 0.5s ease; /* Ensure smooth transition */
+}
+
+.model-wrapper:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  z-index: 3;
+  filter: brightness(1.25);
+}
+
+.model-wrapper::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border: 3px solid var(--dark);
+  border-radius: inherit;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.4), transparent);
+  box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.8);
+  z-index: 4;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.model-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -8px; /* Make the gradient border thicker */
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: inherit;
+  background: var(--gradient-border, linear-gradient(to right, var(--blue), var(--lighter)));
+  pointer-events: none;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.model-title-container {
+  position: relative;
+  width: 100%;
+  background: var(--darkest); /* Set to darkest background */
+  padding: 0.3em 0.8em; /* Reduced padding for compactness */
+  border-bottom: 1px solid var(--dark);
+  box-sizing: border-box;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.model-title {
+  font-size: 0.85em; /* Reduced for compactness */
+  font-weight: bold;
+  text-align: left;
+  padding: 0.2em;
+  color: var(--lighter);
+  font-family: 'Cinzel', serif;
+  box-sizing: border-box;
+  z-index: 11;
+  transition: all 0.3s ease;
+  overflow: hidden; /* Hide overflowing text */
+  white-space: nowrap; /* Prevent wrapping */
+  text-overflow: ellipsis; /* Add ellipsis for long titles */
+}
+
+.model-wrapper:hover .model-title {
+  overflow: visible;
+  position: relative;
+  z-index: 20;
+  background: var(--darkest); /* Ensure readability when overflowed */
+}
+
+.model-subtitle {
+  font-size: 0.8em;
+  font-style: italic;
+  color: var(--lighter);
+  text-align: right;
+  padding: 0.2em;
+  font-family: 'Cinzel', serif;
+  box-sizing: border-box;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.expanded-info {
+  position: absolute;
+  top: 100%; /* Position just below the grid item */
+  left: 0;
+  right: 0;
+  margin-top: 0.5em;
+  background-color: var(--darkest);
+  color: var(--lighter);
+  padding: 1em;
+  border-radius: 0.2em;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-20px);
+  opacity: 0;
+  height: 0;
+  max-height: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease, height 0.5s ease, max-height 0.5s ease; /* Slide, fade, and expand effect */
+  z-index: 15;
+  overflow: hidden; /* Ensure content doesn't overflow when collapsed */
+}
+
+.model-wrapper.hovered .expanded-info {
+  transform: translateY(0); /* Slide up into view */
+  opacity: 1; /* Fade in */
+  height: auto; /* Allow expanded info to grow smoothly */
+  max-height: 500px; /* Set a reasonable max-height to avoid overflowing */
+  transition: transform 0.5s ease, opacity 0.5s ease, height 0.5s ease, max-height 0.5s ease; /* Smooth transition for sliding, fading, and expanding */
+}
+
+.expanded-info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3em 0;
+}
+
+.expanded-info-key {
+  font-weight: bold;
+  text-align: left;
+  flex: 1;
+}
+
+.expanded-info-value {
+  text-align: right;
+  flex: 1;
+}
+
+.model-container {
+  position: relative;
+  background-color: var(--darker);
+  width: 100%;
+  height: auto;
+  padding: 0;
+  overflow: visible;
+  box-sizing: border-box;
+  z-index: 5;
+  border-radius: 0.15em;
+}
+
+.model-container-border {
+  border: 2px solid var(--dark);
+  border-radius: inherit;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  pointer-events: none;
+  z-index: 6;
+}

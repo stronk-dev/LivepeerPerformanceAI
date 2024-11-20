@@ -1,0 +1,68 @@
+.loading-screen-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--darkest), var(--darker));
+  color: var(--text-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.loading-screen-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.loading-screen-logo {
+  width: 150px;
+  height: 150px;
+  z-index: 20; /* Ensures it is always on top */
+  animation: logoGrow 4s infinite alternate ease-in-out, fadeIn 1.5s ease-in-out;
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6)); /* Added depth */
+}
+
+.loading-vertical-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--grey);
+  animation: grow 3s ease-in-out forwards;
+}
+
+.loading-screen-message {
+  background-color: var(--darker);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  position: absolute;
+  z-index: 1;
+  text-wrap: nowrap;
+  animation: fadeIn 0.5s ease-in-out;
+  transition: transform 2s ease-in-out;
+}
+
+/* Keyframes for animations */
+@keyframes logoGrow {
+  0% { transform: scale(1); }
+  100% { transform: scale(2.5); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  20% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+@keyframes grow {
+  0% { height: 0; }
+  100% { height: 60%; }
+}

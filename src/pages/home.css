@@ -1,0 +1,68 @@
+/* home.css - Styles specific to the home.js page */
+
+.dvd-logo {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  transition: transform 0.5s ease-in-out;
+}
+
+.hr {
+  height: 2em;
+  border: none;
+  background-color: var(--darker); /* Give it a thin, blue line look for separation */
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: var(--weird);
+  text-align: center;
+  margin: 20px 0;
+  transition: transform 0.2s, color 0.3s ease;
+}
+
+h4:hover {
+  transform: scale(1.1);
+  color: var(--yellow);
+}
+
+.heatmap-container {
+  background-color: var(--section-background);
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: calc(100% - 2em);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.healthbar-container {
+  padding: 20px;
+  background-color: var(--section-background);
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.heatmap-container {
+  margin-top: 30px;
+}
+
+.healthbar-container {
+  margin-bottom: 30px;
+}
+
+.heatmap-table-wrapper {
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--dark);
+  color: var(--text-color);
+  font-size: 1.8rem;
+}

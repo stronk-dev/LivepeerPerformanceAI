@@ -1,0 +1,103 @@
+.heatmap-container {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--body-background-color);
+  color: var(--text-color);
+}
+
+.heatmap-table-wrapper {
+  overflow-x: auto;
+}
+
+.heatmap-table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.heatmap-table th,
+.heatmap-table td {
+  border: 1px solid var(--grey);
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.heatmap-table th {
+  background-color: var(--darker);
+  color: var(--heading-color);
+  font-weight: bold;
+  font-size: 14px;
+  position: relative;
+}
+
+.heatmap-table th:hover {
+  overflow: visible;
+  white-space: normal;
+  z-index: 5; /* Increase z-index to show above other elements */
+}
+
+.sticky-node {
+  position: sticky;
+  left: 0;
+  background-color: var(--dark);
+  color: var(--heading-color);
+  z-index: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.sticky-node:hover {
+  overflow: visible;
+  white-space: normal;
+  z-index: 5; /* Increase z-index to ensure the expanded view is visible */
+}
+
+.heatmap-table td:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.tooltip {
+  position: fixed; /* Tooltip follows cursor, so fixed keeps it attached to viewport */
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--darkest);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--grey);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  z-index: 10;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters select {
+  padding: 5px;
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  outline: none;
+}
+
+.filters select:hover {
+  background-color: var(--button-hover-background);
+}
+
+.filters option {
+  background-color: var(--darker);
+  color: var(--text-color);
+}

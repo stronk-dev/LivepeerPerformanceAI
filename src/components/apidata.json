@@ -1,0 +1,2535 @@
+{
+    "data": [
+        {
+            "node": "0x104a7ca059a35fd4def5ecb16600b2caa1fe1361",
+            "pipeline": "Audio to text",
+            "model": "openai/whisper-large-v3",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7816836714367692,
+            "score": 0.9235892850028693
+        },
+        {
+            "node": "0x104a7ca059a35fd4def5ecb16600b2caa1fe1361",
+            "pipeline": "Audio to text",
+            "model": "openai/whisper-large-v3",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8707759458870403,
+            "score": 0.9547715810604641
+        },
+        {
+            "node": "0x104a7ca059a35fd4def5ecb16600b2caa1fe1361",
+            "pipeline": "Audio to text",
+            "model": "openai/whisper-large-v3",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8162466659100898,
+            "score": 0.9356863330685314
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Audio to text",
+            "model": "openai/whisper-large-v3",
+            "region": "FRA",
+            "success_rate": 0,
+            "round_trip_score": 0.7980748294866968,
+            "score": 0
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Audio to text",
+            "model": "openai/whisper-large-v3",
+            "region": "MDW",
+            "success_rate": 0,
+            "round_trip_score": 0.835741172239565,
+            "score": 0
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Audio to text",
+            "model": "openai/whisper-large-v3",
+            "region": "SEA",
+            "success_rate": 0,
+            "round_trip_score": 0.7587552058633916,
+            "score": 0
+        },
+        {
+            "node": "0x525419ff5707190389bfb5c87c375d710f5fcb0e",
+            "pipeline": "Audio to text",
+            "model": "openai/whisper-large-v3",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7890248855055028,
+            "score": 0.926158709926926
+        },
+        {
+            "node": "0x525419ff5707190389bfb5c87c375d710f5fcb0e",
+            "pipeline": "Audio to text",
+            "model": "openai/whisper-large-v3",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8819765974779553,
+            "score": 0.9586918091172844
+        },
+        {
+            "node": "0x525419ff5707190389bfb5c87c375d710f5fcb0e",
+            "pipeline": "Audio to text",
+            "model": "openai/whisper-large-v3",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8240729355208498,
+            "score": 0.9384255274322975
+        },
+        {
+            "node": "0x5caaab7626edc7123cf8484edbc66a875dd32cc9",
+            "pipeline": "Audio to text",
+            "model": "openai/whisper-large-v3",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.6817222069622157,
+            "score": 0.8886027724367755
+        },
+        {
+            "node": "0xa6a9eb29e786b5233bd99c0ba28be882fe954a0e",
+            "pipeline": "Audio to text",
+            "model": "openai/whisper-large-v3",
+            "region": "FRA",
+            "success_rate": 0.8333333333333334,
+            "round_trip_score": 0.6805247262117511,
+            "score": 0.7798503208407797
+        },
+        {
+            "node": "0xa6a9eb29e786b5233bd99c0ba28be882fe954a0e",
+            "pipeline": "Audio to text",
+            "model": "openai/whisper-large-v3",
+            "region": "MDW",
+            "success_rate": 0.8333333333333334,
+            "round_trip_score": 0.7663061747474237,
+            "score": 0.809873827828265
+        },
+        {
+            "node": "0xa6a9eb29e786b5233bd99c0ba28be882fe954a0e",
+            "pipeline": "Audio to text",
+            "model": "openai/whisper-large-v3",
+            "region": "SEA",
+            "success_rate": 0.8333333333333334,
+            "round_trip_score": 0.7027201912446527,
+            "score": 0.7876187336022952
+        },
+        {
+            "node": "0xd7775cf383481512c62e030e42e51ab7ec2adaee",
+            "pipeline": "Audio to text",
+            "model": "openai/whisper-large-v3",
+            "region": "FRA",
+            "success_rate": 0,
+            "round_trip_score": 0.8100380988517356,
+            "score": 0
+        },
+        {
+            "node": "0xd7775cf383481512c62e030e42e51ab7ec2adaee",
+            "pipeline": "Audio to text",
+            "model": "openai/whisper-large-v3",
+            "region": "MDW",
+            "success_rate": 0,
+            "round_trip_score": 0.8316684704284939,
+            "score": 0
+        },
+        {
+            "node": "0xd7775cf383481512c62e030e42e51ab7ec2adaee",
+            "pipeline": "Audio to text",
+            "model": "openai/whisper-large-v3",
+            "region": "SEA",
+            "success_rate": 0,
+            "round_trip_score": 0.7971549492259231,
+            "score": 0
+        },
+        {
+            "node": "0xf909ac60c647a14db3663da5ecf5f8ecbe324395",
+            "pipeline": "Image to image",
+            "model": "ByteDance/SDXL-Lightning",
+            "region": "FRA",
+            "success_rate": 0,
+            "round_trip_score": 0,
+            "score": 0
+        },
+        {
+            "node": "0xf909ac60c647a14db3663da5ecf5f8ecbe324395",
+            "pipeline": "Image to image",
+            "model": "ByteDance/SDXL-Lightning",
+            "region": "MDW",
+            "success_rate": 0,
+            "round_trip_score": 0,
+            "score": 0
+        },
+        {
+            "node": "0xf909ac60c647a14db3663da5ecf5f8ecbe324395",
+            "pipeline": "Image to image",
+            "model": "ByteDance/SDXL-Lightning",
+            "region": "SEA",
+            "success_rate": 0,
+            "round_trip_score": 0,
+            "score": 0
+        },
+        {
+            "node": "0x104a7ca059a35fd4def5ecb16600b2caa1fe1361",
+            "pipeline": "Image to image",
+            "model": "timbrooks/instruct-pix2pix",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7861285873355388,
+            "score": 0.9251450055674386
+        },
+        {
+            "node": "0x104a7ca059a35fd4def5ecb16600b2caa1fe1361",
+            "pipeline": "Image to image",
+            "model": "timbrooks/instruct-pix2pix",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8178335827837071,
+            "score": 0.9362417539742975
+        },
+        {
+            "node": "0x104a7ca059a35fd4def5ecb16600b2caa1fe1361",
+            "pipeline": "Image to image",
+            "model": "timbrooks/instruct-pix2pix",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.799426277759879,
+            "score": 0.9297991972159576
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Image to image",
+            "model": "timbrooks/instruct-pix2pix",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.4166140106832589,
+            "score": 0.7958149037391407
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Image to image",
+            "model": "timbrooks/instruct-pix2pix",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.44658559627113337,
+            "score": 0.8063049586948967
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Image to image",
+            "model": "timbrooks/instruct-pix2pix",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.43242858144318785,
+            "score": 0.8013500035051158
+        },
+        {
+            "node": "0x525419ff5707190389bfb5c87c375d710f5fcb0e",
+            "pipeline": "Image to image",
+            "model": "timbrooks/instruct-pix2pix",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7500667173486548,
+            "score": 0.9125233510720292
+        },
+        {
+            "node": "0x525419ff5707190389bfb5c87c375d710f5fcb0e",
+            "pipeline": "Image to image",
+            "model": "timbrooks/instruct-pix2pix",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.7834094989762209,
+            "score": 0.9241933246416774
+        },
+        {
+            "node": "0x525419ff5707190389bfb5c87c375d710f5fcb0e",
+            "pipeline": "Image to image",
+            "model": "timbrooks/instruct-pix2pix",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7637236964384766,
+            "score": 0.9173032937534669
+        },
+        {
+            "node": "0x5263e0ce3a97b634d8828ce4337ad0f70b30b077",
+            "pipeline": "Image to image",
+            "model": "timbrooks/instruct-pix2pix",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8753141867257379,
+            "score": 0.9563599653540082
+        },
+        {
+            "node": "0x5263e0ce3a97b634d8828ce4337ad0f70b30b077",
+            "pipeline": "Image to image",
+            "model": "timbrooks/instruct-pix2pix",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.9126036982097702,
+            "score": 0.9694112943734196
+        },
+        {
+            "node": "0x5263e0ce3a97b634d8828ce4337ad0f70b30b077",
+            "pipeline": "Image to image",
+            "model": "timbrooks/instruct-pix2pix",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8823831511441297,
+            "score": 0.9588341029004455
+        },
+        {
+            "node": "0xa6a9eb29e786b5233bd99c0ba28be882fe954a0e",
+            "pipeline": "Image to image",
+            "model": "timbrooks/instruct-pix2pix",
+            "region": "FRA",
+            "success_rate": 0,
+            "round_trip_score": 0.7424560928343752,
+            "score": 0
+        },
+        {
+            "node": "0xa6a9eb29e786b5233bd99c0ba28be882fe954a0e",
+            "pipeline": "Image to image",
+            "model": "timbrooks/instruct-pix2pix",
+            "region": "MDW",
+            "success_rate": 0,
+            "round_trip_score": 0.7784812166006844,
+            "score": 0
+        },
+        {
+            "node": "0xa6a9eb29e786b5233bd99c0ba28be882fe954a0e",
+            "pipeline": "Image to image",
+            "model": "timbrooks/instruct-pix2pix",
+            "region": "SEA",
+            "success_rate": 0,
+            "round_trip_score": 0.7617610426407726,
+            "score": 0
+        },
+        {
+            "node": "0xd00354656922168815fcd1e51cbddb9e359e3c7f",
+            "pipeline": "Image to image",
+            "model": "timbrooks/instruct-pix2pix",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8790283017157279,
+            "score": 0.9576599056005047
+        },
+        {
+            "node": "0xd00354656922168815fcd1e51cbddb9e359e3c7f",
+            "pipeline": "Image to image",
+            "model": "timbrooks/instruct-pix2pix",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.9108628368886511,
+            "score": 0.9688019929110279
+        },
+        {
+            "node": "0xd00354656922168815fcd1e51cbddb9e359e3c7f",
+            "pipeline": "Image to image",
+            "model": "timbrooks/instruct-pix2pix",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8848689673222783,
+            "score": 0.9597041385627973
+        },
+        {
+            "node": "0xd7775cf383481512c62e030e42e51ab7ec2adaee",
+            "pipeline": "Image to image",
+            "model": "timbrooks/instruct-pix2pix",
+            "region": "FRA",
+            "success_rate": 0,
+            "round_trip_score": 0.917730418559819,
+            "score": 0
+        },
+        {
+            "node": "0xd7775cf383481512c62e030e42e51ab7ec2adaee",
+            "pipeline": "Image to image",
+            "model": "timbrooks/instruct-pix2pix",
+            "region": "MDW",
+            "success_rate": 0,
+            "round_trip_score": 0.9490831083283721,
+            "score": 0
+        },
+        {
+            "node": "0xd7775cf383481512c62e030e42e51ab7ec2adaee",
+            "pipeline": "Image to image",
+            "model": "timbrooks/instruct-pix2pix",
+            "region": "SEA",
+            "success_rate": 0,
+            "round_trip_score": 0.9418056750629582,
+            "score": 0
+        },
+        {
+            "node": "0x10742714f33f3d804e3fa489618b5c3ca12a6df7",
+            "pipeline": "Image to text",
+            "model": "Salesforce/blip-image-captioning-large",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.6519070979274336,
+            "score": 0.8781674842746018
+        },
+        {
+            "node": "0x10742714f33f3d804e3fa489618b5c3ca12a6df7",
+            "pipeline": "Image to text",
+            "model": "Salesforce/blip-image-captioning-large",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8359087248979191,
+            "score": 0.9425680537142718
+        },
+        {
+            "node": "0x10742714f33f3d804e3fa489618b5c3ca12a6df7",
+            "pipeline": "Image to text",
+            "model": "Salesforce/blip-image-captioning-large",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8897236403031186,
+            "score": 0.9614032741060915
+        },
+        {
+            "node": "0x5263e0ce3a97b634d8828ce4337ad0f70b30b077",
+            "pipeline": "Image to text",
+            "model": "Salesforce/blip-image-captioning-large",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7371849687719413,
+            "score": 0.9080147390701794
+        },
+        {
+            "node": "0x5263e0ce3a97b634d8828ce4337ad0f70b30b077",
+            "pipeline": "Image to text",
+            "model": "Salesforce/blip-image-captioning-large",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8720240308021789,
+            "score": 0.9552084107807626
+        },
+        {
+            "node": "0x5263e0ce3a97b634d8828ce4337ad0f70b30b077",
+            "pipeline": "Image to text",
+            "model": "Salesforce/blip-image-captioning-large",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.788594160397637,
+            "score": 0.926007956139173
+        },
+        {
+            "node": "0xd00354656922168815fcd1e51cbddb9e359e3c7f",
+            "pipeline": "Image to text",
+            "model": "Salesforce/blip-image-captioning-large",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7250319184094041,
+            "score": 0.9037611714432914
+        },
+        {
+            "node": "0xd00354656922168815fcd1e51cbddb9e359e3c7f",
+            "pipeline": "Image to text",
+            "model": "Salesforce/blip-image-captioning-large",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8762254625417438,
+            "score": 0.9566789118896104
+        },
+        {
+            "node": "0xd00354656922168815fcd1e51cbddb9e359e3c7f",
+            "pipeline": "Image to text",
+            "model": "Salesforce/blip-image-captioning-large",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7684467715378536,
+            "score": 0.9189563700382488
+        },
+        {
+            "node": "0x104a7ca059a35fd4def5ecb16600b2caa1fe1361",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.847181237263356,
+            "score": 0.9465134330421746
+        },
+        {
+            "node": "0x104a7ca059a35fd4def5ecb16600b2caa1fe1361",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8517507851687793,
+            "score": 0.9481127748090727
+        },
+        {
+            "node": "0x104a7ca059a35fd4def5ecb16600b2caa1fe1361",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8476869974434429,
+            "score": 0.9466904491052051
+        },
+        {
+            "node": "0x10742714f33f3d804e3fa489618b5c3ca12a6df7",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8593719827628994,
+            "score": 0.9507801939670149
+        },
+        {
+            "node": "0x10742714f33f3d804e3fa489618b5c3ca12a6df7",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8670998056685302,
+            "score": 0.9534849319839855
+        },
+        {
+            "node": "0x10742714f33f3d804e3fa489618b5c3ca12a6df7",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8688645541559943,
+            "score": 0.954102593954598
+        },
+        {
+            "node": "0x2e3a21ae7cdeb48f57fcad1ce16b258d5502ac05",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7660766881458285,
+            "score": 0.9181268408510399
+        },
+        {
+            "node": "0x2e3a21ae7cdeb48f57fcad1ce16b258d5502ac05",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.7600934994926736,
+            "score": 0.9160327248224358
+        },
+        {
+            "node": "0x2e3a21ae7cdeb48f57fcad1ce16b258d5502ac05",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7560559849553564,
+            "score": 0.9146195947343747
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.6352346874698144,
+            "score": 0.8723321406144351
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.6482345171809125,
+            "score": 0.8768820810133193
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.6442955347085914,
+            "score": 0.875503437148007
+        },
+        {
+            "node": "0x525419ff5707190389bfb5c87c375d710f5fcb0e",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.6830558723888789,
+            "score": 0.8890695553361077
+        },
+        {
+            "node": "0x525419ff5707190389bfb5c87c375d710f5fcb0e",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.6867860784784402,
+            "score": 0.8903751274674541
+        },
+        {
+            "node": "0x525419ff5707190389bfb5c87c375d710f5fcb0e",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.6839744964835566,
+            "score": 0.8893910737692448
+        },
+        {
+            "node": "0x6cb1ce2516fb7d211038420a8cf9a843c7bd3b08",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.6961817365262156,
+            "score": 0.8936636077841755
+        },
+        {
+            "node": "0x6cb1ce2516fb7d211038420a8cf9a843c7bd3b08",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "MDW",
+            "success_rate": 0.75,
+            "round_trip_score": 0.7557060558435093,
+            "score": 0.7519971195452282
+        },
+        {
+            "node": "0x6cb1ce2516fb7d211038420a8cf9a843c7bd3b08",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.6883832781271493,
+            "score": 0.8909341473445023
+        },
+        {
+            "node": "0x847791cbf03be716a7fe9dc8c9affe17bd49ae5e",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8109949666487278,
+            "score": 0.9338482383270548
+        },
+        {
+            "node": "0x847791cbf03be716a7fe9dc8c9affe17bd49ae5e",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8028915627293098,
+            "score": 0.9310120469552585
+        },
+        {
+            "node": "0x847791cbf03be716a7fe9dc8c9affe17bd49ae5e",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7997116661901382,
+            "score": 0.9298990831665483
+        },
+        {
+            "node": "0x9d61ae5875e89036fbf6059f3116d01a22ace3c8",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "FRA",
+            "success_rate": 0.8333333333333334,
+            "round_trip_score": 0.8564466421321731,
+            "score": 0.8414229914129273
+        },
+        {
+            "node": "0x9d61ae5875e89036fbf6059f3116d01a22ace3c8",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8644400472105301,
+            "score": 0.9525540165236855
+        },
+        {
+            "node": "0x9d61ae5875e89036fbf6059f3116d01a22ace3c8",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8588492392022594,
+            "score": 0.9505972337207909
+        },
+        {
+            "node": "0xa6a9eb29e786b5233bd99c0ba28be882fe954a0e",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "FRA",
+            "success_rate": 0,
+            "round_trip_score": 0.6458735313861361,
+            "score": 0
+        },
+        {
+            "node": "0xa6a9eb29e786b5233bd99c0ba28be882fe954a0e",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "MDW",
+            "success_rate": 0,
+            "round_trip_score": 0.6497136143068114,
+            "score": 0
+        },
+        {
+            "node": "0xa6a9eb29e786b5233bd99c0ba28be882fe954a0e",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "SEA",
+            "success_rate": 0,
+            "round_trip_score": 0.6479871272642679,
+            "score": 0
+        },
+        {
+            "node": "0xd7775cf383481512c62e030e42e51ab7ec2adaee",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "FRA",
+            "success_rate": 0,
+            "round_trip_score": 0.9871342899178014,
+            "score": 0
+        },
+        {
+            "node": "0xd7775cf383481512c62e030e42e51ab7ec2adaee",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "MDW",
+            "success_rate": 0,
+            "round_trip_score": 0.9922898255726347,
+            "score": 0
+        },
+        {
+            "node": "0xd7775cf383481512c62e030e42e51ab7ec2adaee",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "SEA",
+            "success_rate": 0,
+            "round_trip_score": 0.9912821667693409,
+            "score": 0
+        },
+        {
+            "node": "0xeb6dde1a9e305fe8b1556056bbdf14d25d3a878b",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8587768486002307,
+            "score": 0.9505718970100807
+        },
+        {
+            "node": "0xeb6dde1a9e305fe8b1556056bbdf14d25d3a878b",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8666700504299446,
+            "score": 0.9533345176504806
+        },
+        {
+            "node": "0xeb6dde1a9e305fe8b1556056bbdf14d25d3a878b",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8683403722270527,
+            "score": 0.9539191302794685
+        },
+        {
+            "node": "0xf909ac60c647a14db3663da5ecf5f8ecbe324395",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7592176717250175,
+            "score": 0.9157261851037561
+        },
+        {
+            "node": "0xf909ac60c647a14db3663da5ecf5f8ecbe324395",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.7507877892051188,
+            "score": 0.9127757262217916
+        },
+        {
+            "node": "0xf909ac60c647a14db3663da5ecf5f8ecbe324395",
+            "pipeline": "Image to video",
+            "model": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7474550219752627,
+            "score": 0.9116092576913419
+        },
+        {
+            "node": "0xa8aad06cd07185514a7c394649c80434af47b379",
+            "pipeline": "Llm",
+            "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.9189806514197941,
+            "score": 0.9716432279969279
+        },
+        {
+            "node": "0xa8aad06cd07185514a7c394649c80434af47b379",
+            "pipeline": "Llm",
+            "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.7909150044243949,
+            "score": 0.9268202515485382
+        },
+        {
+            "node": "0xa8aad06cd07185514a7c394649c80434af47b379",
+            "pipeline": "Llm",
+            "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7571521112337836,
+            "score": 0.9150032389318242
+        },
+        {
+            "node": "0x0d509d8b46b072f8fc330942b2e3cc0ac34d6d8d",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7898605419442306,
+            "score": 0.9264511896804808
+        },
+        {
+            "node": "0x0d509d8b46b072f8fc330942b2e3cc0ac34d6d8d",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8142666777237441,
+            "score": 0.9349933372033103
+        },
+        {
+            "node": "0x0d509d8b46b072f8fc330942b2e3cc0ac34d6d8d",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8082209259650192,
+            "score": 0.9328773240877567
+        },
+        {
+            "node": "0x104a7ca059a35fd4def5ecb16600b2caa1fe1361",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8182784915728475,
+            "score": 0.9363974720504966
+        },
+        {
+            "node": "0x104a7ca059a35fd4def5ecb16600b2caa1fe1361",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8614953167797684,
+            "score": 0.951523360872919
+        },
+        {
+            "node": "0x104a7ca059a35fd4def5ecb16600b2caa1fe1361",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7770929462292745,
+            "score": 0.9219825311802461
+        },
+        {
+            "node": "0x10742714f33f3d804e3fa489618b5c3ca12a6df7",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8138430564545825,
+            "score": 0.934845069759104
+        },
+        {
+            "node": "0x10742714f33f3d804e3fa489618b5c3ca12a6df7",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8822725334569025,
+            "score": 0.9587953867099159
+        },
+        {
+            "node": "0x10742714f33f3d804e3fa489618b5c3ca12a6df7",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.864914241992733,
+            "score": 0.9527199846974566
+        },
+        {
+            "node": "0x2e3a21ae7cdeb48f57fcad1ce16b258d5502ac05",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8789972808690336,
+            "score": 0.9576490483041618
+        },
+        {
+            "node": "0x2e3a21ae7cdeb48f57fcad1ce16b258d5502ac05",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8034384890514439,
+            "score": 0.9312034711680053
+        },
+        {
+            "node": "0x2e3a21ae7cdeb48f57fcad1ce16b258d5502ac05",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7428806098836187,
+            "score": 0.9100082134592666
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.656735687512796,
+            "score": 0.8798574906294786
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.7589707791086777,
+            "score": 0.9156397726880372
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.6042745676522817,
+            "score": 0.8614960986782986
+        },
+        {
+            "node": "0x5caaab7626edc7123cf8484edbc66a875dd32cc9",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8209485875456346,
+            "score": 0.9373320056409722
+        },
+        {
+            "node": "0x5d11abd838073df76e32c495f97fd3239eabb9fb",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "FRA",
+            "success_rate": 0.8333333333333334,
+            "round_trip_score": 0.3697942853326627,
+            "score": 0.6710946665330987
+        },
+        {
+            "node": "0x5d11abd838073df76e32c495f97fd3239eabb9fb",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.7353452994474071,
+            "score": 0.9073708548065925
+        },
+        {
+            "node": "0x5d11abd838073df76e32c495f97fd3239eabb9fb",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7457905979679227,
+            "score": 0.9110267092887729
+        },
+        {
+            "node": "0x5ea1b47194b98044fca8a187237d9704c91478ca",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8497925420079682,
+            "score": 0.9474273897027888
+        },
+        {
+            "node": "0x5ea1b47194b98044fca8a187237d9704c91478ca",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8223073120597327,
+            "score": 0.9378075592209065
+        },
+        {
+            "node": "0x5ea1b47194b98044fca8a187237d9704c91478ca",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7695552943946092,
+            "score": 0.9193443530381132
+        },
+        {
+            "node": "0x6cb1ce2516fb7d211038420a8cf9a843c7bd3b08",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.5410810552611315,
+            "score": 0.8393783693413961
+        },
+        {
+            "node": "0x6cb1ce2516fb7d211038420a8cf9a843c7bd3b08",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.3651058561934769,
+            "score": 0.777787049667717
+        },
+        {
+            "node": "0x6cb1ce2516fb7d211038420a8cf9a843c7bd3b08",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.47834681083010117,
+            "score": 0.8174213837905354
+        },
+        {
+            "node": "0x74a7839094b7f723b2c1c915e88928f49dfdc21f",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8675268687254776,
+            "score": 0.9536344040539171
+        },
+        {
+            "node": "0x74a7839094b7f723b2c1c915e88928f49dfdc21f",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.7910421225077796,
+            "score": 0.9268647428777228
+        },
+        {
+            "node": "0x74a7839094b7f723b2c1c915e88928f49dfdc21f",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.6738316460654915,
+            "score": 0.8858410761229221
+        },
+        {
+            "node": "0x9d5611bf0dadddb4441a709141d9229d7f6b3e47",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7369704481602942,
+            "score": 0.907939656856103
+        },
+        {
+            "node": "0x9d5611bf0dadddb4441a709141d9229d7f6b3e47",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8164972194239689,
+            "score": 0.9357740267983892
+        },
+        {
+            "node": "0x9d5611bf0dadddb4441a709141d9229d7f6b3e47",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8103031149691825,
+            "score": 0.9336060902392138
+        },
+        {
+            "node": "0x9d61ae5875e89036fbf6059f3116d01a22ace3c8",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8460240682301626,
+            "score": 0.9461084238805569
+        },
+        {
+            "node": "0x9d61ae5875e89036fbf6059f3116d01a22ace3c8",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8423975988187207,
+            "score": 0.9448391595865522
+        },
+        {
+            "node": "0x9d61ae5875e89036fbf6059f3116d01a22ace3c8",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7881862213140971,
+            "score": 0.925865177459934
+        },
+        {
+            "node": "0xd7775cf383481512c62e030e42e51ab7ec2adaee",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7603922016187057,
+            "score": 0.9161372705665469
+        },
+        {
+            "node": "0xd7775cf383481512c62e030e42e51ab7ec2adaee",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8710101249958708,
+            "score": 0.9548535437485548
+        },
+        {
+            "node": "0xd7775cf383481512c62e030e42e51ab7ec2adaee",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8074175604916398,
+            "score": 0.932596146172074
+        },
+        {
+            "node": "0xd93e0a15511935889aec76f79d54dff0e27af82e",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8115559530313021,
+            "score": 0.9340445835609558
+        },
+        {
+            "node": "0xd93e0a15511935889aec76f79d54dff0e27af82e",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.7801197782385109,
+            "score": 0.9230419223834788
+        },
+        {
+            "node": "0xd93e0a15511935889aec76f79d54dff0e27af82e",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7206328294840472,
+            "score": 0.9022214903194166
+        },
+        {
+            "node": "0xdc28f2842810d1a013ad51de174d02eaba192dc7",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.6899406195932437,
+            "score": 0.8914792168576353
+        },
+        {
+            "node": "0xdc28f2842810d1a013ad51de174d02eaba192dc7",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.5997858164147757,
+            "score": 0.8599250357451715
+        },
+        {
+            "node": "0xdc28f2842810d1a013ad51de174d02eaba192dc7",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.5806386873737787,
+            "score": 0.8532235405808225
+        },
+        {
+            "node": "0xeb6dde1a9e305fe8b1556056bbdf14d25d3a878b",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.812579640834701,
+            "score": 0.9344028742921453
+        },
+        {
+            "node": "0xeb6dde1a9e305fe8b1556056bbdf14d25d3a878b",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8743704846736094,
+            "score": 0.9560296696357633
+        },
+        {
+            "node": "0xeb6dde1a9e305fe8b1556056bbdf14d25d3a878b",
+            "pipeline": "Segment anything 2",
+            "model": "facebook/sam2-hiera-large",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.868287051303591,
+            "score": 0.9539004679562568
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Text to image",
+            "model": "black-forest-labs/FLUX.1-dev",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7973031205940018,
+            "score": 0.9290560922079006
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Text to image",
+            "model": "black-forest-labs/FLUX.1-dev",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8514088460923147,
+            "score": 0.9479930961323102
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Text to image",
+            "model": "black-forest-labs/FLUX.1-dev",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8084928156938634,
+            "score": 0.9329724854928523
+        },
+        {
+            "node": "0x847791cbf03be716a7fe9dc8c9affe17bd49ae5e",
+            "pipeline": "Text to image",
+            "model": "black-forest-labs/FLUX.1-dev",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8524227470493358,
+            "score": 0.9483479614672676
+        },
+        {
+            "node": "0x847791cbf03be716a7fe9dc8c9affe17bd49ae5e",
+            "pipeline": "Text to image",
+            "model": "black-forest-labs/FLUX.1-dev",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.7923821753583753,
+            "score": 0.9273337613754313
+        },
+        {
+            "node": "0x847791cbf03be716a7fe9dc8c9affe17bd49ae5e",
+            "pipeline": "Text to image",
+            "model": "black-forest-labs/FLUX.1-dev",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.774369114616263,
+            "score": 0.9210291901156921
+        },
+        {
+            "node": "0xdc28f2842810d1a013ad51de174d02eaba192dc7",
+            "pipeline": "Text to image",
+            "model": "black-forest-labs/FLUX.1-dev",
+            "region": "FRA",
+            "success_rate": 0.8333333333333334,
+            "round_trip_score": 0.851374180394764,
+            "score": 0.8396476298048341
+        },
+        {
+            "node": "0xdc28f2842810d1a013ad51de174d02eaba192dc7",
+            "pipeline": "Text to image",
+            "model": "black-forest-labs/FLUX.1-dev",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.7945073322188009,
+            "score": 0.9280775662765803
+        },
+        {
+            "node": "0xdc28f2842810d1a013ad51de174d02eaba192dc7",
+            "pipeline": "Text to image",
+            "model": "black-forest-labs/FLUX.1-dev",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.771281820274692,
+            "score": 0.9199486370961423
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Text to image",
+            "model": "black-forest-labs/FLUX.1-schnell",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7718496970479134,
+            "score": 0.9201473939667697
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Text to image",
+            "model": "black-forest-labs/FLUX.1-schnell",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.814632354227728,
+            "score": 0.9351213239797047
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Text to image",
+            "model": "black-forest-labs/FLUX.1-schnell",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7912400954185541,
+            "score": 0.9269340333964939
+        },
+        {
+            "node": "0x847791cbf03be716a7fe9dc8c9affe17bd49ae5e",
+            "pipeline": "Text to image",
+            "model": "black-forest-labs/FLUX.1-schnell",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8774467681365294,
+            "score": 0.9571063688477853
+        },
+        {
+            "node": "0x847791cbf03be716a7fe9dc8c9affe17bd49ae5e",
+            "pipeline": "Text to image",
+            "model": "black-forest-labs/FLUX.1-schnell",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8365821088781428,
+            "score": 0.94280373810735
+        },
+        {
+            "node": "0x847791cbf03be716a7fe9dc8c9affe17bd49ae5e",
+            "pipeline": "Text to image",
+            "model": "black-forest-labs/FLUX.1-schnell",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8098543929112658,
+            "score": 0.933449037518943
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Text to image",
+            "model": "ByteDance/SDXL-Lightning",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7649131145619175,
+            "score": 0.917719590096671
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Text to image",
+            "model": "ByteDance/SDXL-Lightning",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.9004625116766388,
+            "score": 0.9651618790868236
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Text to image",
+            "model": "ByteDance/SDXL-Lightning",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7949297919173893,
+            "score": 0.9282254271710862
+        },
+        {
+            "node": "0x847791cbf03be716a7fe9dc8c9affe17bd49ae5e",
+            "pipeline": "Text to image",
+            "model": "ByteDance/SDXL-Lightning",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.9403564408145839,
+            "score": 0.9791247542851044
+        },
+        {
+            "node": "0x847791cbf03be716a7fe9dc8c9affe17bd49ae5e",
+            "pipeline": "Text to image",
+            "model": "ByteDance/SDXL-Lightning",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8001335013667988,
+            "score": 0.9300467254783795
+        },
+        {
+            "node": "0x847791cbf03be716a7fe9dc8c9affe17bd49ae5e",
+            "pipeline": "Text to image",
+            "model": "ByteDance/SDXL-Lightning",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7113572470092486,
+            "score": 0.8989750364532371
+        },
+        {
+            "node": "0x9d5611bf0dadddb4441a709141d9229d7f6b3e47",
+            "pipeline": "Text to image",
+            "model": "ByteDance/SDXL-Lightning",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.6838079514747416,
+            "score": 0.8893327830161596
+        },
+        {
+            "node": "0x9d5611bf0dadddb4441a709141d9229d7f6b3e47",
+            "pipeline": "Text to image",
+            "model": "ByteDance/SDXL-Lightning",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.7936453074918337,
+            "score": 0.9277758576221418
+        },
+        {
+            "node": "0x9d5611bf0dadddb4441a709141d9229d7f6b3e47",
+            "pipeline": "Text to image",
+            "model": "ByteDance/SDXL-Lightning",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8744268280688878,
+            "score": 0.9560493898241107
+        },
+        {
+            "node": "0xdc28f2842810d1a013ad51de174d02eaba192dc7",
+            "pipeline": "Text to image",
+            "model": "ByteDance/SDXL-Lightning",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8892113847323921,
+            "score": 0.9612239846563373
+        },
+        {
+            "node": "0xdc28f2842810d1a013ad51de174d02eaba192dc7",
+            "pipeline": "Text to image",
+            "model": "ByteDance/SDXL-Lightning",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.7632095545928871,
+            "score": 0.9171233441075105
+        },
+        {
+            "node": "0xdc28f2842810d1a013ad51de174d02eaba192dc7",
+            "pipeline": "Text to image",
+            "model": "ByteDance/SDXL-Lightning",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7109566688582875,
+            "score": 0.8988348341004007
+        },
+        {
+            "node": "0xf909ac60c647a14db3663da5ecf5f8ecbe324395",
+            "pipeline": "Text to image",
+            "model": "ByteDance/SDXL-Lightning",
+            "region": "FRA",
+            "success_rate": 0,
+            "round_trip_score": 0.8237956327722007,
+            "score": 0
+        },
+        {
+            "node": "0xf909ac60c647a14db3663da5ecf5f8ecbe324395",
+            "pipeline": "Text to image",
+            "model": "ByteDance/SDXL-Lightning",
+            "region": "MDW",
+            "success_rate": 0,
+            "round_trip_score": 0.7634876211503999,
+            "score": 0
+        },
+        {
+            "node": "0xf909ac60c647a14db3663da5ecf5f8ecbe324395",
+            "pipeline": "Text to image",
+            "model": "ByteDance/SDXL-Lightning",
+            "region": "SEA",
+            "success_rate": 0,
+            "round_trip_score": 0.7569423489252397,
+            "score": 0
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Text to image",
+            "model": "kandinsky-community/kandinsky-3",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7966576255216767,
+            "score": 0.9288301689325869
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Text to image",
+            "model": "kandinsky-community/kandinsky-3",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8051184837630804,
+            "score": 0.9317914693170781
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Text to image",
+            "model": "kandinsky-community/kandinsky-3",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7976926789461806,
+            "score": 0.9291924376311632
+        },
+        {
+            "node": "0x9d61ae5875e89036fbf6059f3116d01a22ace3c8",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7979700727952772,
+            "score": 0.9292895254783471
+        },
+        {
+            "node": "0x9d61ae5875e89036fbf6059f3116d01a22ace3c8",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8829970835851341,
+            "score": 0.9590489792547969
+        },
+        {
+            "node": "0x9d61ae5875e89036fbf6059f3116d01a22ace3c8",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7953789546181157,
+            "score": 0.9283826341163405
+        },
+        {
+            "node": "0x104a7ca059a35fd4def5ecb16600b2caa1fe1361",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0_Lightning",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7973168694460747,
+            "score": 0.9290609043061262
+        },
+        {
+            "node": "0x104a7ca059a35fd4def5ecb16600b2caa1fe1361",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0_Lightning",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8579650393231756,
+            "score": 0.9502877637631115
+        },
+        {
+            "node": "0x104a7ca059a35fd4def5ecb16600b2caa1fe1361",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0_Lightning",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8175741206039372,
+            "score": 0.9361509422113781
+        },
+        {
+            "node": "0x10b21af759129f32c6064adfb85d3ea2a8c0209c",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0_Lightning",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.5654640596084735,
+            "score": 0.8479124208629657
+        },
+        {
+            "node": "0x10b21af759129f32c6064adfb85d3ea2a8c0209c",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0_Lightning",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.6444631769043897,
+            "score": 0.8755621119165364
+        },
+        {
+            "node": "0x10b21af759129f32c6064adfb85d3ea2a8c0209c",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0_Lightning",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.6773129824304316,
+            "score": 0.887059543850651
+        },
+        {
+            "node": "0x22b1bcc0c0db224bfc56c9b95a2db407548666ee",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0_Lightning",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8957396150342638,
+            "score": 0.9635088652619923
+        },
+        {
+            "node": "0x22b1bcc0c0db224bfc56c9b95a2db407548666ee",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0_Lightning",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.7987798872593589,
+            "score": 0.9295729605407757
+        },
+        {
+            "node": "0x22b1bcc0c0db224bfc56c9b95a2db407548666ee",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0_Lightning",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7455621511549702,
+            "score": 0.9109467529042395
+        },
+        {
+            "node": "0x525419ff5707190389bfb5c87c375d710f5fcb0e",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0_Lightning",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7840463423325236,
+            "score": 0.9244162198163832
+        },
+        {
+            "node": "0x525419ff5707190389bfb5c87c375d710f5fcb0e",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0_Lightning",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8622926839900187,
+            "score": 0.9518024393965065
+        },
+        {
+            "node": "0x525419ff5707190389bfb5c87c375d710f5fcb0e",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0_Lightning",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8171923115821816,
+            "score": 0.9360173090537636
+        },
+        {
+            "node": "0x5caaab7626edc7123cf8484edbc66a875dd32cc9",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0_Lightning",
+            "region": "FRA",
+            "success_rate": 0,
+            "round_trip_score": 0.5017516122577536,
+            "score": 0
+        },
+        {
+            "node": "0xa6a9eb29e786b5233bd99c0ba28be882fe954a0e",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0_Lightning",
+            "region": "FRA",
+            "success_rate": 0,
+            "round_trip_score": 0.0004535508356368906,
+            "score": 0
+        },
+        {
+            "node": "0xa6a9eb29e786b5233bd99c0ba28be882fe954a0e",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0_Lightning",
+            "region": "MDW",
+            "success_rate": 0,
+            "round_trip_score": 0.0004998467452371364,
+            "score": 0
+        },
+        {
+            "node": "0xa6a9eb29e786b5233bd99c0ba28be882fe954a0e",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0_Lightning",
+            "region": "SEA",
+            "success_rate": 0,
+            "round_trip_score": 0.000476374340470791,
+            "score": 0
+        },
+        {
+            "node": "0xbb4c38fae6eef586f521e369117354e43ac7dd5b",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0_Lightning",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.9123600831039603,
+            "score": 0.9693260290863861
+        },
+        {
+            "node": "0xbb4c38fae6eef586f521e369117354e43ac7dd5b",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0_Lightning",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8085706114621762,
+            "score": 0.9329997140117616
+        },
+        {
+            "node": "0xbb4c38fae6eef586f521e369117354e43ac7dd5b",
+            "pipeline": "Text to image",
+            "model": "SG161222/RealVisXL_V4.0_Lightning",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7392082626647062,
+            "score": 0.9087228919326471
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Text to image",
+            "model": "stabilityai/stable-diffusion-3.5-large",
+            "region": "FRA",
+            "success_rate": 0.8333333333333334,
+            "round_trip_score": 0.7960367347218548,
+            "score": 0.8202795238193159
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Text to image",
+            "model": "stabilityai/stable-diffusion-3.5-large",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8195087358909139,
+            "score": 0.9368280575618199
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Text to image",
+            "model": "stabilityai/stable-diffusion-3.5-large",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7992834754206497,
+            "score": 0.9297492163972274
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Text to image",
+            "model": "stabilityai/stable-diffusion-3.5-medium",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7943561223248294,
+            "score": 0.9280246428136902
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Text to image",
+            "model": "stabilityai/stable-diffusion-3.5-medium",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8014769690698785,
+            "score": 0.9305169391744574
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Text to image",
+            "model": "stabilityai/stable-diffusion-3.5-medium",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7984048343045084,
+            "score": 0.929441692006578
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Text to image",
+            "model": "stabilityai/stable-diffusion-3-medium-diffusers",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7800891050930407,
+            "score": 0.9230311867825642
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Text to image",
+            "model": "stabilityai/stable-diffusion-3-medium-diffusers",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.7971493800963334,
+            "score": 0.9290022830337167
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Text to image",
+            "model": "stabilityai/stable-diffusion-3-medium-diffusers",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.786182943646559,
+            "score": 0.9251640302762957
+        },
+        {
+            "node": "0x847791cbf03be716a7fe9dc8c9affe17bd49ae5e",
+            "pipeline": "Text to image",
+            "model": "stabilityai/stable-diffusion-3-medium-diffusers",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.9939888532356267,
+            "score": 0.9978960986324694
+        },
+        {
+            "node": "0x847791cbf03be716a7fe9dc8c9affe17bd49ae5e",
+            "pipeline": "Text to image",
+            "model": "stabilityai/stable-diffusion-3-medium-diffusers",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.9859863212592013,
+            "score": 0.9950952124407204
+        },
+        {
+            "node": "0x847791cbf03be716a7fe9dc8c9affe17bd49ae5e",
+            "pipeline": "Text to image",
+            "model": "stabilityai/stable-diffusion-3-medium-diffusers",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.9836927674421146,
+            "score": 0.9942924686047401
+        },
+        {
+            "node": "0x10742714f33f3d804e3fa489618b5c3ca12a6df7",
+            "pipeline": "Text to speech",
+            "model": "parler-tts/parler-tts-large-v1",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7884703130188677,
+            "score": 0.9259646095566036
+        },
+        {
+            "node": "0x10742714f33f3d804e3fa489618b5c3ca12a6df7",
+            "pipeline": "Text to speech",
+            "model": "parler-tts/parler-tts-large-v1",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8250052155877644,
+            "score": 0.9387518254557176
+        },
+        {
+            "node": "0x10742714f33f3d804e3fa489618b5c3ca12a6df7",
+            "pipeline": "Text to speech",
+            "model": "parler-tts/parler-tts-large-v1",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8245394720180972,
+            "score": 0.938588815206334
+        },
+        {
+            "node": "0x2e3a21ae7cdeb48f57fcad1ce16b258d5502ac05",
+            "pipeline": "Text to speech",
+            "model": "parler-tts/parler-tts-large-v1",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.6607037213553474,
+            "score": 0.8812463024743715
+        },
+        {
+            "node": "0x2e3a21ae7cdeb48f57fcad1ce16b258d5502ac05",
+            "pipeline": "Text to speech",
+            "model": "parler-tts/parler-tts-large-v1",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.6433403996330342,
+            "score": 0.875169139871562
+        },
+        {
+            "node": "0x2e3a21ae7cdeb48f57fcad1ce16b258d5502ac05",
+            "pipeline": "Text to speech",
+            "model": "parler-tts/parler-tts-large-v1",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.6494169619015183,
+            "score": 0.8772959366655314
+        },
+        {
+            "node": "0x5263e0ce3a97b634d8828ce4337ad0f70b30b077",
+            "pipeline": "Text to speech",
+            "model": "parler-tts/parler-tts-large-v1",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8311470693314873,
+            "score": 0.9409014742660206
+        },
+        {
+            "node": "0x5263e0ce3a97b634d8828ce4337ad0f70b30b077",
+            "pipeline": "Text to speech",
+            "model": "parler-tts/parler-tts-large-v1",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8163725990376304,
+            "score": 0.9357304096631707
+        },
+        {
+            "node": "0x5263e0ce3a97b634d8828ce4337ad0f70b30b077",
+            "pipeline": "Text to speech",
+            "model": "parler-tts/parler-tts-large-v1",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.81105338426054,
+            "score": 0.933868684491189
+        },
+        {
+            "node": "0x74a7839094b7f723b2c1c915e88928f49dfdc21f",
+            "pipeline": "Text to speech",
+            "model": "parler-tts/parler-tts-large-v1",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.6557956246328333,
+            "score": 0.8795284686214917
+        },
+        {
+            "node": "0x74a7839094b7f723b2c1c915e88928f49dfdc21f",
+            "pipeline": "Text to speech",
+            "model": "parler-tts/parler-tts-large-v1",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.6728969968628742,
+            "score": 0.885513948902006
+        },
+        {
+            "node": "0x74a7839094b7f723b2c1c915e88928f49dfdc21f",
+            "pipeline": "Text to speech",
+            "model": "parler-tts/parler-tts-large-v1",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.6578294047054691,
+            "score": 0.8802402916469142
+        },
+        {
+            "node": "0xd00354656922168815fcd1e51cbddb9e359e3c7f",
+            "pipeline": "Text to speech",
+            "model": "parler-tts/parler-tts-large-v1",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8090011470971904,
+            "score": 0.9331504014840166
+        },
+        {
+            "node": "0xd00354656922168815fcd1e51cbddb9e359e3c7f",
+            "pipeline": "Text to speech",
+            "model": "parler-tts/parler-tts-large-v1",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8229497177852817,
+            "score": 0.9380324012248487
+        },
+        {
+            "node": "0xd00354656922168815fcd1e51cbddb9e359e3c7f",
+            "pipeline": "Text to speech",
+            "model": "parler-tts/parler-tts-large-v1",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8052648167544931,
+            "score": 0.9318426858640726
+        },
+        {
+            "node": "0xd7775cf383481512c62e030e42e51ab7ec2adaee",
+            "pipeline": "Text to speech",
+            "model": "parler-tts/parler-tts-large-v1",
+            "region": "FRA",
+            "success_rate": 0,
+            "round_trip_score": 0.9908028701701821,
+            "score": 0
+        },
+        {
+            "node": "0xd7775cf383481512c62e030e42e51ab7ec2adaee",
+            "pipeline": "Text to speech",
+            "model": "parler-tts/parler-tts-large-v1",
+            "region": "MDW",
+            "success_rate": 0,
+            "round_trip_score": 0.9976795885721033,
+            "score": 0
+        },
+        {
+            "node": "0xd7775cf383481512c62e030e42e51ab7ec2adaee",
+            "pipeline": "Text to speech",
+            "model": "parler-tts/parler-tts-large-v1",
+            "region": "SEA",
+            "success_rate": 0,
+            "round_trip_score": 0.9950816872623798,
+            "score": 0
+        },
+        {
+            "node": "0xeb6dde1a9e305fe8b1556056bbdf14d25d3a878b",
+            "pipeline": "Text to speech",
+            "model": "parler-tts/parler-tts-large-v1",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8061685012948199,
+            "score": 0.9321589754531869
+        },
+        {
+            "node": "0xeb6dde1a9e305fe8b1556056bbdf14d25d3a878b",
+            "pipeline": "Text to speech",
+            "model": "parler-tts/parler-tts-large-v1",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8081791589065085,
+            "score": 0.932862705617278
+        },
+        {
+            "node": "0xeb6dde1a9e305fe8b1556056bbdf14d25d3a878b",
+            "pipeline": "Text to speech",
+            "model": "parler-tts/parler-tts-large-v1",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.823036113874964,
+            "score": 0.9380626398562374
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "bsrgan_x2",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7917436457051295,
+            "score": 0.9271102759967953
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "bsrgan_x2",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.808371273579621,
+            "score": 0.9329299457528674
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "bsrgan_x2",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7925563205252851,
+            "score": 0.9273947121838497
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "bsrgan_x4",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7811507060750201,
+            "score": 0.923402747126257
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "bsrgan_x4",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8054727232895965,
+            "score": 0.9319154531513587
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "bsrgan_x4",
+            "region": "SEA",
+            "success_rate": 0.8333333333333334,
+            "round_trip_score": 0.7855364893462515,
+            "score": 0.8166044379378548
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "nmkd_superscale_sp_x4",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7890489607590429,
+            "score": 0.9261671362656649
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "nmkd_superscale_sp_x4",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8110238287438806,
+            "score": 0.9338583400603582
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "nmkd_superscale_sp_x4",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7961550599252452,
+            "score": 0.9286542709738358
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "realesrgan_anime_x4",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7960670744963814,
+            "score": 0.9286234760737335
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "realesrgan_anime_x4",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8115369440073097,
+            "score": 0.9340379304025583
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "realesrgan_anime_x4",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.80211772851821,
+            "score": 0.9307412049813735
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "realesrgan_x2",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7967211087503699,
+            "score": 0.9288523880626295
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "realesrgan_x2",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.811889325048259,
+            "score": 0.9341612637668906
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "realesrgan_x2",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.799626787539194,
+            "score": 0.929869375638718
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "realesrgan_x4",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7946072996972934,
+            "score": 0.9281125548940528
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "realesrgan_x4",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8121759747492695,
+            "score": 0.9342615911622443
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "realesrgan_x4",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7966428748522365,
+            "score": 0.9288250061982828
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "real_hat_gan_sr_x4",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7890399971855322,
+            "score": 0.9261639990149363
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "real_hat_gan_sr_x4",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8059220202241266,
+            "score": 0.9320727070784443
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "real_hat_gan_sr_x4",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7998766051511522,
+            "score": 0.9299568118029033
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "real_hat_gan_sr_x4_sharper",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7933001746681504,
+            "score": 0.9276550611338527
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "real_hat_gan_sr_x4_sharper",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8115133222338969,
+            "score": 0.934029662781864
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "real_hat_gan_sr_x4_sharper",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8007209290274538,
+            "score": 0.9302523251596089
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "scunet_color_real_gan",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7891426452608515,
+            "score": 0.9261999258412981
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "scunet_color_real_gan",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8064542045869456,
+            "score": 0.932258971605431
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "scunet_color_real_gan",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7974509852941188,
+            "score": 0.9291078448529416
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "scunet_color_real_psnr",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7900102090235377,
+            "score": 0.9265035731582382
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "scunet_color_real_psnr",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8045755659346483,
+            "score": 0.9316014480771269
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "scunet_color_real_psnr",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8011764721537121,
+            "score": 0.9304117652537993
+        },
+        {
+            "node": "0x525419ff5707190389bfb5c87c375d710f5fcb0e",
+            "pipeline": "Upscale",
+            "model": "stabilityai/stable-diffusion-x4-upscaler",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.7607847316106734,
+            "score": 0.9162746560637357
+        },
+        {
+            "node": "0x525419ff5707190389bfb5c87c375d710f5fcb0e",
+            "pipeline": "Upscale",
+            "model": "stabilityai/stable-diffusion-x4-upscaler",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.7984855376424529,
+            "score": 0.9294699381748586
+        },
+        {
+            "node": "0x525419ff5707190389bfb5c87c375d710f5fcb0e",
+            "pipeline": "Upscale",
+            "model": "stabilityai/stable-diffusion-x4-upscaler",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.777631683741911,
+            "score": 0.9221710893096688
+        },
+        {
+            "node": "0x847791cbf03be716a7fe9dc8c9affe17bd49ae5e",
+            "pipeline": "Upscale",
+            "model": "stabilityai/stable-diffusion-x4-upscaler",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.9034383982005422,
+            "score": 0.9662034393701897
+        },
+        {
+            "node": "0x847791cbf03be716a7fe9dc8c9affe17bd49ae5e",
+            "pipeline": "Upscale",
+            "model": "stabilityai/stable-diffusion-x4-upscaler",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.852920506818207,
+            "score": 0.9485221773863725
+        },
+        {
+            "node": "0x847791cbf03be716a7fe9dc8c9affe17bd49ae5e",
+            "pipeline": "Upscale",
+            "model": "stabilityai/stable-diffusion-x4-upscaler",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.8329951339152829,
+            "score": 0.941548296870349
+        },
+        {
+            "node": "0xa6a9eb29e786b5233bd99c0ba28be882fe954a0e",
+            "pipeline": "Upscale",
+            "model": "stabilityai/stable-diffusion-x4-upscaler",
+            "region": "FRA",
+            "success_rate": 0,
+            "round_trip_score": 0.06246852540489446,
+            "score": 0
+        },
+        {
+            "node": "0xa6a9eb29e786b5233bd99c0ba28be882fe954a0e",
+            "pipeline": "Upscale",
+            "model": "stabilityai/stable-diffusion-x4-upscaler",
+            "region": "MDW",
+            "success_rate": 0,
+            "round_trip_score": 0.06609928933150219,
+            "score": 0
+        },
+        {
+            "node": "0xa6a9eb29e786b5233bd99c0ba28be882fe954a0e",
+            "pipeline": "Upscale",
+            "model": "stabilityai/stable-diffusion-x4-upscaler",
+            "region": "SEA",
+            "success_rate": 0,
+            "round_trip_score": 0.060853519839950104,
+            "score": 0
+        },
+        {
+            "node": "0xd4c467d8c13752ab7bb9711bc77de2a9f52a65f6",
+            "pipeline": "Upscale",
+            "model": "stabilityai/stable-diffusion-x4-upscaler",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8217087465601718,
+            "score": 0.9375980612960602
+        },
+        {
+            "node": "0xd4c467d8c13752ab7bb9711bc77de2a9f52a65f6",
+            "pipeline": "Upscale",
+            "model": "stabilityai/stable-diffusion-x4-upscaler",
+            "region": "MDW",
+            "success_rate": 0.8333333333333334,
+            "round_trip_score": 0.7875573663188082,
+            "score": 0.8173117448782496
+        },
+        {
+            "node": "0xd4c467d8c13752ab7bb9711bc77de2a9f52a65f6",
+            "pipeline": "Upscale",
+            "model": "stabilityai/stable-diffusion-x4-upscaler",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7236445360638825,
+            "score": 0.9032755876223588
+        },
+        {
+            "node": "0xd7775cf383481512c62e030e42e51ab7ec2adaee",
+            "pipeline": "Upscale",
+            "model": "stabilityai/stable-diffusion-x4-upscaler",
+            "region": "FRA",
+            "success_rate": 0,
+            "round_trip_score": 0.899616444489987,
+            "score": 0
+        },
+        {
+            "node": "0xd7775cf383481512c62e030e42e51ab7ec2adaee",
+            "pipeline": "Upscale",
+            "model": "stabilityai/stable-diffusion-x4-upscaler",
+            "region": "MDW",
+            "success_rate": 0,
+            "round_trip_score": 0.9322841291404439,
+            "score": 0
+        },
+        {
+            "node": "0xd7775cf383481512c62e030e42e51ab7ec2adaee",
+            "pipeline": "Upscale",
+            "model": "stabilityai/stable-diffusion-x4-upscaler",
+            "region": "SEA",
+            "success_rate": 0,
+            "round_trip_score": 0.9187814138816776,
+            "score": 0
+        },
+        {
+            "node": "0xdc28f2842810d1a013ad51de174d02eaba192dc7",
+            "pipeline": "Upscale",
+            "model": "stabilityai/stable-diffusion-x4-upscaler",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.8357859513676729,
+            "score": 0.9425250829786855
+        },
+        {
+            "node": "0xdc28f2842810d1a013ad51de174d02eaba192dc7",
+            "pipeline": "Upscale",
+            "model": "stabilityai/stable-diffusion-x4-upscaler",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8015569372058691,
+            "score": 0.9305449280220541
+        },
+        {
+            "node": "0xdc28f2842810d1a013ad51de174d02eaba192dc7",
+            "pipeline": "Upscale",
+            "model": "stabilityai/stable-diffusion-x4-upscaler",
+            "region": "SEA",
+            "success_rate": 0.8333333333333334,
+            "round_trip_score": 0.7406409875747919,
+            "score": 0.8008910123178439
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "swin2sr_classical_x2",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.790899360290459,
+            "score": 0.9268147761016607
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "swin2sr_classical_x2",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8100670453696672,
+            "score": 0.9335234658793835
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "swin2sr_classical_x2",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7942429831763996,
+            "score": 0.9279850441117399
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "swin2sr_classical_x4",
+            "region": "FRA",
+            "success_rate": 1,
+            "round_trip_score": 0.794113921720419,
+            "score": 0.9279398726021466
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "swin2sr_classical_x4",
+            "region": "MDW",
+            "success_rate": 1,
+            "round_trip_score": 0.8066584084575902,
+            "score": 0.9323304429601565
+        },
+        {
+            "node": "0x3b28a7d785356dc67c7970666747e042305bfb79",
+            "pipeline": "Upscale",
+            "model": "swin2sr_classical_x4",
+            "region": "SEA",
+            "success_rate": 1,
+            "round_trip_score": 0.7985400226676761,
+            "score": 0.9294890079336866
+        }
+    ],
+    "pipelines": [
+        "Audio to text",
+        "Image to image",
+        "Image to text",
+        "Image to video",
+        "Llm",
+        "Segment anything 2",
+        "Text to image",
+        "Text to speech",
+        "Upscale"
+    ],
+    "models": [
+        "openai/whisper-large-v3",
+        "ByteDance/SDXL-Lightning",
+        "timbrooks/instruct-pix2pix",
+        "Salesforce/blip-image-captioning-large",
+        "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+        "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "facebook/sam2-hiera-large",
+        "black-forest-labs/FLUX.1-dev",
+        "black-forest-labs/FLUX.1-schnell",
+        "kandinsky-community/kandinsky-3",
+        "SG161222/RealVisXL_V4.0",
+        "SG161222/RealVisXL_V4.0_Lightning",
+        "stabilityai/stable-diffusion-3.5-large",
+        "stabilityai/stable-diffusion-3.5-medium",
+        "stabilityai/stable-diffusion-3-medium-diffusers",
+        "parler-tts/parler-tts-large-v1",
+        "bsrgan_x2",
+        "bsrgan_x4",
+        "nmkd_superscale_sp_x4",
+        "realesrgan_anime_x4",
+        "realesrgan_x2",
+        "realesrgan_x4",
+        "real_hat_gan_sr_x4",
+        "real_hat_gan_sr_x4_sharper",
+        "scunet_color_real_gan",
+        "scunet_color_real_psnr",
+        "stabilityai/stable-diffusion-x4-upscaler",
+        "swin2sr_classical_x2",
+        "swin2sr_classical_x4"
+    ],
+    "regions": [
+        "FRA",
+        "MDW",
+        "SEA"
+    ]
+}
