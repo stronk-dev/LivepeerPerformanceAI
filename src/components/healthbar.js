@@ -113,12 +113,11 @@ const Bar = ({ model, nodes, averageSuccessRate, averageRoundTrip, averageScore,
               <span className="expanded-info-key">Average Success Rate:</span>
               <span className="expanded-info-value">{(averageSuccessRate * 100).toFixed(0)}%</span>
             </div>
-            <span className="expanded-info-key">Discovery results:</span>
-            <span className="expanded-info-row">Good nodes ({modelNodes.length}):</span>
+            <span className="expanded-info-key">Good nodes ({modelNodes.length}):</span>
             {modelNodes.map((val) => (
-              <div className="expanded-info-row" key={val + model + "stat"}>
-                <span className="expanded-info-key">{val}</span>
-              </div>
+              <span className="expanded-info-row" key={val + model + "stat"}>
+                {val}
+              </span>
             ))}
           </div>
         )}
