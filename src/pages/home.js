@@ -16,6 +16,11 @@ const Home = () => {
           We can probably just query all active Orchs -> Get ENS name for each of 'em
             then map this on render
     TODO: the table should really be draggable... Scrolling horizontally is blergh
+    TODO: maybe the health buttons should filter or highlight the relevant column in the table
+    TODO: we should do the processing of data once im home, then pass the parsed data to the healthbar and heatmap
+          Much easier to support transcode that way.
+    TODO: let's add a tab: AI vs Transcode
+          This way we can also pull all transcode results. Health bar per ingest region
   */
 
   const batchProcessData = async (apiResponse) => {
