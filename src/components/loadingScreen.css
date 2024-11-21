@@ -20,6 +20,7 @@
 .loading-screen-logo {
   width: 150px;
   height: 150px;
+  border-radius: 2em;
   z-index: 20; /* Ensures it is always on top */
   animation: logoGrow 4s infinite alternate ease-in-out, fadeIn 1.5s ease-in-out;
   filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6)); /* Added depth */
