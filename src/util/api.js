@@ -71,8 +71,6 @@ export const getCapabilities = async () => {
 //   ]
 // }
 
-//
-// 
 // model+pipeline specific results
 export const getJobPerformance = async (pipeline, model) => {
   try {
@@ -107,4 +105,67 @@ export const getJobPerformance = async (pipeline, model) => {
 //       "score": 0.96188461559819
 //     }
 //   }
+// }
+
+// Which nodes have which models warm/cold
+export const getDiscoveryStats = async () => {
+  try {
+    const response = await fetch(`https://dream-gateway.livepeer.cloud/getOrchestratorAICapabilities`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching capabilities:", error);
+    throw error;
+  }
+};
+// (output excerpt for reference)
+// {
+//   "orchestrators": [
+//       {
+//           "address": "0x847791cbf03be716a7fe9dc8c9affe17bd49ae5e",
+//           "pipelines": [
+//               {
+//                   "type": "Image to video",
+//                   "models": [
+//                       {
+//                           "name": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+//                           "status": {
+//                               "Cold": 0,
+//                               "Warm": 1
+//                           }
+//                       }
+//                   ]
+//               },
+//               {
+//                   "type": "Text to image",
+//                   "models": [
+//                       {
+//                           "name": "ByteDance/SDXL-Lightning",
+//                           "status": {
+//                               "Cold": 0,
+//                               "Warm": 1
+//                           }
+//                       },
+//                       {
+//                           "name": "black-forest-labs/FLUX.1-dev",
+//                           "status": {
+//                               "Cold": 0,
+//                               "Warm": 1
+//                           }
+//                       },
+//                       {
+//                           "name": "black-forest-labs/FLUX.1-schnell",
+//                           "status": {
+//                               "Cold": 0,
+//                               "Warm": 1
+//                           }
+//                       }
+//                   ]
+//               }
+//           ]
+//       },
+//     ]
 // }

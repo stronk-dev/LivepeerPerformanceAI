@@ -37,11 +37,12 @@ const parseAPIData = (rawData) => {
       averageSuccessRate: avg("averageSuccessRate"),
       averageRoundTrip: avg("averageRoundTrip"),
       averageScore: avg("averageScore"),
+      discoveryStats: rawData.models[model]
     };
   }).sort((a, b) => b.nodes - a.nodes); // Sort by number of nodes in descending order
 };
 
-const Bar = ({ model, nodes, averageSuccessRate, averageRoundTrip, averageScore, performingNodes }) => {
+const Bar = ({ model, nodes, averageSuccessRate, averageRoundTrip, averageScore, performingNodes, discoveryStats }) => {
   const [hovered, setIsHovered] = useState(false);
 
   // State to manage the rotating degree
@@ -112,6 +113,18 @@ const Bar = ({ model, nodes, averageSuccessRate, averageRoundTrip, averageScore,
               <span className="expanded-info-key">Average Success Rate:</span>
               <span className="expanded-info-value">{(averageSuccessRate * 100).toFixed(0)}%</span>
             </div>
+            <span className="expanded-info-row">Warm ({discoveryStats["Warm"].length}):</span>
+            {discoveryStats["Warm"].map((val) => (
+              <div className="expanded-info-row" key={val + model + "cold"}>
+                <span className="expanded-info-key">{val}</span>
+              </div>
+            ))}
+            <span className="expanded-info-row">Cold ({discoveryStats["Cold"].length}):</span>
+            {discoveryStats["Cold"].map((val) => (
+              <div className="expanded-info-row" key={val + model + "warm"}>
+                <span className="expanded-info-key" >{val}</span>
+              </div>
+            ))}
           </div>
         )}
       </div>
@@ -125,9 +138,9 @@ const HealthBar = ({ rawData }) => {
   return (
     <div className="health-bar-container">
       {processedData.map(
-        ({ model, nodes, averageSuccessRate, averageRoundTrip, performingNodes, averageScore }, i) => {
+        ({ model, nodes, averageSuccessRate, averageRoundTrip, performingNodes, averageScore, discoveryStats }, i) => {
           return (
-            <Bar key={model + i} model={model} nodes={nodes} averageRoundTrip={averageRoundTrip} performingNodes={performingNodes} averageScore={averageScore} averageSuccessRate={averageSuccessRate} />
+            <Bar key={model + i} model={model} nodes={nodes} averageRoundTrip={averageRoundTrip} performingNodes={performingNodes} averageScore={averageScore} averageSuccessRate={averageSuccessRate} discoveryStats={discoveryStats} />
           );
         }
       )}

@@ -133,8 +133,6 @@
 .expanded-info {
   position: absolute;
   top: 100%; /* Position just below the grid item */
-  left: 0;
-  right: 0;
   margin-top: 0.5em;
   background-color: var(--darkest);
   color: var(--lighter);
@@ -147,7 +145,7 @@
   max-height: 0;
   transition: transform 0.5s ease, opacity 0.5s ease, height 0.5s ease, max-height 0.5s ease; /* Slide, fade, and expand effect */
   z-index: 15;
-  overflow: hidden; /* Ensure content doesn't overflow when collapsed */
+  overflow: visible;
 }
 
 .model-wrapper.hovered .expanded-info {
