@@ -98,13 +98,9 @@ const Bar = ({ model, nodes, averageSuccessRate, averageRoundTrip, averageScore,
       <div className="model-container">
         <div className="model-container-border"></div>
         <div className="model-title-container"><div className="model-title">{model}</div></div>
-        <div className="model-subtitle">Nodes: {nodes}</div>
+        <div className="model-subtitle">Good Nodes: {performingNodes}</div>
         {hovered && (
           <div className="expanded-info">
-            <div className="expanded-info-row">
-              <span className="expanded-info-key">Good nodes:</span>
-              <span className="expanded-info-value">{performingNodes}</span>
-            </div>
             <div className="expanded-info-row">
               <span className="expanded-info-key">Average Score:</span>
               <span className="expanded-info-value">{(averageRoundTrip * 100).toFixed(0)}%</span>
@@ -113,6 +109,7 @@ const Bar = ({ model, nodes, averageSuccessRate, averageRoundTrip, averageScore,
               <span className="expanded-info-key">Average Success Rate:</span>
               <span className="expanded-info-value">{(averageSuccessRate * 100).toFixed(0)}%</span>
             </div>
+            <span className="expanded-info-key">Discovery results:</span>
             <span className="expanded-info-row">Warm ({discoveryStats["Warm"].length}):</span>
             {discoveryStats["Warm"].map((val) => (
               <div className="expanded-info-row" key={val + model + "cold"}>

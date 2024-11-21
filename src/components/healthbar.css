@@ -152,7 +152,7 @@
   transform: translateY(0); /* Slide up into view */
   opacity: 1; /* Fade in */
   height: auto; /* Allow expanded info to grow smoothly */
-  max-height: 500px; /* Set a reasonable max-height to avoid overflowing */
+  max-height: 100vh; /* Set a reasonable max-height to avoid overflowing */
   transition: transform 0.5s ease, opacity 0.5s ease, height 0.5s ease, max-height 0.5s ease; /* Smooth transition for sliding, fading, and expanding */
 }
 
