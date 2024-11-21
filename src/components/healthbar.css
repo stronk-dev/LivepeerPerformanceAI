@@ -59,22 +59,21 @@
   left: -6px;
   right: -6px;
   bottom: -6px;
-  border: 3px solid var(--dark);
+  border: 2px solid var(--dark);
   border-radius: inherit;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.4), transparent);
-  box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.8);
   z-index: 4;
   pointer-events: none;
   overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
 }
 
 .model-wrapper::before {
   content: "";
   position: absolute;
-  top: -8px; /* Make the gradient border thicker */
-  left: -8px;
-  right: -8px;
-  bottom: -8px;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
   border-radius: inherit;
   background: var(--gradient-border, linear-gradient(to right, var(--blue), var(--lighter)));
   pointer-events: none;
@@ -94,6 +93,7 @@
   align-items: center;
   justify-content: space-between;
   transition: all 0.3s ease;
+  box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.8);
 }
 
 .model-title {
@@ -183,16 +183,4 @@
   box-sizing: border-box;
   z-index: 5;
   border-radius: 0.15em;
-}
-
-.model-container-border {
-  border: 2px solid var(--dark);
-  border-radius: inherit;
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  pointer-events: none;
-  z-index: 6;
 }

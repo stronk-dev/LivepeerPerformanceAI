@@ -15,6 +15,7 @@ const Home = () => {
     TODO: ENS names! Let's use the subgraph?
           We can probably just query all active Orchs -> Get ENS name for each of 'em
             then map this on render
+    TODO: the table should really be draggable... Scrolling horizontally is blergh
   */
 
   const processDiscoveryresults = (discoveryStats) => {
@@ -86,6 +87,7 @@ const Home = () => {
         console.log("Batch processing model results...");
         batchProcessData(capas, discoveryStats)
           .then((combinedResults) => {
+            console.log("Done! Unloading the loading screen...");
             setData(combinedResults);
           })
           .catch((error) => {
