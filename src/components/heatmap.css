@@ -3,10 +3,30 @@
   font-family: 'Roboto', sans-serif;
   background-color: var(--body-background-color);
   color: var(--text-color);
+  margin: 0;
+  padding: 0;
 }
 
 .heatmap-table-wrapper {
   overflow-x: auto;
+}
+
+.heatmap-table-wrapper::-webkit-scrollbar {
+  height: 12px;
+}
+
+.heatmap-table-wrapper::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color);
+}
+
+.heatmap-table-wrapper::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color);
+  border-radius: 6px;
+  filter: brightness(0.8);
+}
+
+.heatmap-table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover-color);
 }
 
 .heatmap-table {

@@ -26,12 +26,13 @@ h4:hover {
   color: var(--yellow);
 }
 
-.heatmap-container {
+.heatmap-wrapper {
   background-color: var(--section-background);
   border-radius: 10px;
   margin: 20px auto;
-  max-width: calc(100% - 2em);
+  padding: 0.5em;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-top: 30px;
 }
 
 .healthbar-container {
@@ -41,13 +42,6 @@ h4:hover {
   margin: 20px auto;
   max-width: 90%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.heatmap-container {
-  margin-top: 30px;
-}
-
-.healthbar-container {
   margin-bottom: 30px;
 }
 

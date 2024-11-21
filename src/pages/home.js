@@ -106,7 +106,7 @@ const Home = () => {
         <HealthBar rawData={processedData} />
       </div>
       <div className="hr" />
-      <div className="heatmap-container">
+      <div className="heatmap-wrapper">
         <h4>Performance Heatmap</h4>
         <Heatmap rawData={processedData} />
       </div>
