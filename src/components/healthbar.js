@@ -11,8 +11,12 @@ const parseAPIData = (rawData) => {
   });
 
   return Object.entries(modelMetrics).map(([model, nodes]) => {
+    const modelNodes = []
     const deduplicatedNodes = Object.entries(nodes).map(([node, tests]) => {
       const avg = (key) => tests.reduce((sum, test) => sum + test[key], 0) / tests.length;
+      if (avg("success_rate") > 0.80 && avg("round_trip_score") > 0.75) {
+        modelNodes.push(node);
+      }
       return {
         node,
         averageSuccessRate: avg("success_rate"),
@@ -26,8 +30,8 @@ const parseAPIData = (rawData) => {
 
     const redundancy = deduplicatedNodes.filter(
       (node) =>
-        node.averageSuccessRate > 0.85 &&
-        node.averageScore > 0.85
+        node.averageSuccessRate > 0.80 &&
+        node.averageRoundTrip > 0.75
     ).length;
 
     return {
@@ -37,12 +41,12 @@ const parseAPIData = (rawData) => {
       averageSuccessRate: avg("averageSuccessRate"),
       averageRoundTrip: avg("averageRoundTrip"),
       averageScore: avg("averageScore"),
-      discoveryStats: rawData.models[model]
+      modelNodes: modelNodes
     };
   }).sort((a, b) => b.nodes - a.nodes); // Sort by number of nodes in descending order
 };
 
-const Bar = ({ model, nodes, averageSuccessRate, averageRoundTrip, averageScore, performingNodes, discoveryStats }) => {
+const Bar = ({ model, nodes, averageSuccessRate, averageRoundTrip, averageScore, performingNodes, modelNodes }) => {
   const [hovered, setIsHovered] = useState(false);
 
   // State to manage the rotating degree
@@ -110,16 +114,10 @@ const Bar = ({ model, nodes, averageSuccessRate, averageRoundTrip, averageScore,
               <span className="expanded-info-value">{(averageSuccessRate * 100).toFixed(0)}%</span>
             </div>
             <span className="expanded-info-key">Discovery results:</span>
-            <span className="expanded-info-row">Warm ({discoveryStats["Warm"].length}):</span>
-            {discoveryStats["Warm"].map((val) => (
-              <div className="expanded-info-row" key={val + model + "cold"}>
+            <span className="expanded-info-row">Good nodes ({modelNodes.length}):</span>
+            {modelNodes.map((val) => (
+              <div className="expanded-info-row" key={val + model + "stat"}>
                 <span className="expanded-info-key">{val}</span>
-              </div>
-            ))}
-            <span className="expanded-info-row">Cold ({discoveryStats["Cold"].length}):</span>
-            {discoveryStats["Cold"].map((val) => (
-              <div className="expanded-info-row" key={val + model + "warm"}>
-                <span className="expanded-info-key" >{val}</span>
               </div>
             ))}
           </div>
@@ -135,9 +133,9 @@ const HealthBar = ({ rawData }) => {
   return (
     <div className="health-bar-container">
       {processedData.map(
-        ({ model, nodes, averageSuccessRate, averageRoundTrip, performingNodes, averageScore, discoveryStats }, i) => {
+        ({ model, nodes, averageSuccessRate, averageRoundTrip, performingNodes, averageScore, modelNodes }, i) => {
           return (
-            <Bar key={model + i} model={model} nodes={nodes} averageRoundTrip={averageRoundTrip} performingNodes={performingNodes} averageScore={averageScore} averageSuccessRate={averageSuccessRate} discoveryStats={discoveryStats} />
+            <Bar key={model + i} model={model} nodes={nodes} averageRoundTrip={averageRoundTrip} performingNodes={performingNodes} averageScore={averageScore} averageSuccessRate={averageSuccessRate} modelNodes={modelNodes} />
           );
         }
       )}
