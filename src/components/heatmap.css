@@ -65,9 +65,9 @@
 }
 
 .tooltip {
-  position: fixed; /* Tooltip follows cursor, so fixed keeps it attached to viewport */
-  background: rgba(255, 255, 255, 0.95);
-  color: var(--darkest);
+  position: fixed;
+  background-color: var(--darkest);
+  color: var(--lighter);
   padding: 10px;
   border-radius: 5px;
   border: 1px solid var(--grey);
