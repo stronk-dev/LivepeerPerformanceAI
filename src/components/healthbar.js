@@ -73,7 +73,7 @@ const Bar = ({ model, nodes, averageSuccessRate, averageRoundTrip, averageScore,
   };
 
   // Calculate colors for average score and performing nodes
-  const roundTripScore = averageRoundTrip * averageRoundTrip;
+  const roundTripScore = averageRoundTrip;
   const roundTripColor = `rgba(${calculateColor(roundTripScore)}, 1)`;
   const successRateScore = averageSuccessRate * averageSuccessRate;
   const successColor = `rgba(${calculateColor(successRateScore)}, 1)`;
@@ -117,12 +117,12 @@ const Bar = ({ model, nodes, averageSuccessRate, averageRoundTrip, averageScore,
             </div>
             <hr />
             <div className="expanded-info-row">
-              <span className="expanded-info-key">Average Roundtrip time:</span>
-              <span className="expanded-info-value" style={{ color: roundTripColor }}>{(averageRoundTrip * 100).toFixed(0)}%</span>
+              <span className="expanded-info-key">Roundtrip score:</span>
+              <span className="expanded-info-value" style={{ color: roundTripColor }}>{(roundTripScore * 100).toFixed(0)}%</span>
             </div>
             <div className="expanded-info-row">
-              <span className="expanded-info-key">Average Success Rate:</span>
-              <span className="expanded-info-value" style={{ color: successColor }}>{(averageSuccessRate * 100).toFixed(0)}%</span>
+              <span className="expanded-info-key">Success Rate score:</span>
+              <span className="expanded-info-value" style={{ color: successColor }}>{(successRateScore * 100).toFixed(0)}%</span>
             </div>
             <div className="expanded-info-row">
               <span className="expanded-info-key">Good nodes:</span>
