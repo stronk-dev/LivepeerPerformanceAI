@@ -84,8 +84,8 @@
 .model-title-container {
   position: relative;
   width: 100%;
-  background: var(--darkest); /* Set to darkest background */
-  padding: 0.3em 0.8em; /* Reduced padding for compactness */
+  background: var(--darkest);
+  padding: 0.3em 0.8em;
   border-bottom: 1px solid var(--dark);
   box-sizing: border-box;
   z-index: 10;
@@ -101,7 +101,7 @@
   font-weight: bold;
   text-align: center;
   padding: 0.2em;
-  color: var(--lighter);
+  color: var(--lightest);
   font-family: 'Cinzel', serif;
   box-sizing: border-box;
   z-index: 11;
@@ -115,7 +115,8 @@
   overflow: visible;
   position: relative;
   z-index: 20;
-  background: var(--darkest); /* Ensure readability when overflowed */
+  color: var(--weird);
+  background: var(--darkest);
 }
 
 .model-subtitle {
@@ -183,4 +184,10 @@
   box-sizing: border-box;
   z-index: 5;
   border-radius: 0.15em;
+}
+
+hr {
+  height: 0.2em;
+  border: none;
+  background-color: var(--darker);
 }

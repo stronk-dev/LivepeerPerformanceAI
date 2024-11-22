@@ -52,13 +52,25 @@
   color: var(--heading-color);
   font-weight: bold;
   font-size: 14px;
+  height: 40px;
   position: relative;
 }
 
 .heatmap-table th:hover {
   overflow: visible;
-  white-space: normal;
-  z-index: 5; /* Increase z-index to show above other elements */
+  position: relative;
+  z-index: 20;
+  color: var(--weird);
+  background: var(--darkest);
+}
+
+.heatmap-table th:hover span {
+  overflow: visible;
+  position: relative;
+  z-index: 20;
+  height: 40px;
+  color: var(--weird);
+  background: var(--darkest);
 }
 
 .sticky-node {
@@ -75,12 +87,23 @@
 
 .sticky-node:hover {
   overflow: visible;
-  white-space: normal;
-  z-index: 5; /* Increase z-index to ensure the expanded view is visible */
+  z-index: 20;
+  color: var(--weird);
+  background: var(--darkest);
+}
+
+.sticky-node:hover span {
+  position: sticky;
+  left: 0;
+  z-index: 20;
+  height: 40px;
+  color: var(--weird);
+  background: var(--darkest);
 }
 
 .heatmap-table td:hover {
   transform: scale(1.05);
+  color: var(--weird);
   z-index: 2;
 }
 

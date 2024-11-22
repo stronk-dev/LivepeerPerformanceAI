@@ -108,14 +108,14 @@ const Heatmap = ({ rawData }) => {
             <tr>
               <th>Node</th>
               {sortedCombos.map((key) => (
-                <th key={key}>{uniqueCombos[key].short}</th>
+                <th key={key}><span>{uniqueCombos[key].short}</span></th>
               ))}
             </tr>
           </thead>
           <tbody>
             {groupedData.map(({ node, combos }) => (
               <tr key={node}>
-                <td className="sticky-node">{node}</td>
+                <td className="sticky-node"><span>{node}</span></td>
                 {sortedCombos.map((key) => {
                   const entry = combos.find((c) => c.combo === key);
                   const cellStyle = entry
@@ -155,7 +155,7 @@ const Heatmap = ({ rawData }) => {
           }}
         >
           <p>
-            <strong>Pipeline + Model:</strong> {hoverInfo.combo.replace("-", " (") + ")"}
+            <strong>{hoverInfo.combo.replace("-", " (") + ")"}</strong>
           </p>
           <p>
             <strong>Average Score:</strong> {hoverInfo.averageScore.toFixed(2)}
