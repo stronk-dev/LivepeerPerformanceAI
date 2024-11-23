@@ -27,6 +27,7 @@ const Heatmap = ({ rawData }) => {
       acc[ethAddr].combos[job] = {
         model: entry.model,
         pipeline: entry.pipeline,
+        ethAddr: ethAddr,
         totalScore: 0,
         totalSuccessRate: 0,
         totalRoundTrip: 0,
@@ -59,8 +60,9 @@ const Heatmap = ({ rawData }) => {
       node,
       totalNodeScore,
       combos: Object.entries(combos).map(
-        ([combo, { totalScore, totalRoundTrip, totalSuccessRate, model, pipeline, count }]) => ({
+        ([combo, { totalScore, totalRoundTrip, totalSuccessRate, model, ethAddr, pipeline, count }]) => ({
           combo,
+          ethAddr: ethAddr,
           model: model,
           pipeline: pipeline,
           totalScore: totalScore,
@@ -165,6 +167,9 @@ const Heatmap = ({ rawData }) => {
           </div>
           <div className="heatmap-tooltip-subheader">
             <span>{hoverInfo.model}</span>
+          </div>
+          <div className="heatmap-tooltip-subsubheader">
+            <span>{hoverInfo.ethAddr}</span>
           </div>
           <div className="heatmap-tooltip-divider"></div>
           <div className="heatmap-tooltip-body">
