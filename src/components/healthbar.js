@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./healthbar.css";
 
-const Bar = ({ model, metrics }) => {
+const Bar = ({ model, pipeline, metrics }) => {
   const {
     totalSuccessRate = 0,
     totalRoundTrip = 0,
@@ -71,7 +71,7 @@ const Bar = ({ model, metrics }) => {
     setTooltipStyle({});
   };
 
-  
+
   const roundTripScore = averageRoundTrip;
   const roundTripColor = `rgba(${calculateColor(roundTripScore)}, 1)`;
   const successRateScore = averageSuccessRate * averageSuccessRate;
@@ -102,6 +102,12 @@ const Bar = ({ model, metrics }) => {
           className={`expanded-info tooltip ${tooltipVisible ? 'visible' : ''}`}
           style={tooltipStyle}
         >
+          <div className="bar-header">
+            <span>{pipeline}</span>
+          </div>
+          <div className="bar-subheader">
+            <span>{model}</span>
+          </div>
           <div className="expanded-info-row">
             <span className="expanded-info-key">Total score:</span>
             <span className="expanded-info-value" style={{ color: totalScoreColor }}>
@@ -164,6 +170,7 @@ const HealthBar = ({ data, isLoading, isError }) => {
         <Bar
           key={`${job}-${index}`}
           model={modelData.model}
+          pipeline={modelData.pipeline}
           metrics={modelData}
         />
       ))}

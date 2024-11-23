@@ -111,14 +111,6 @@
   text-overflow: ellipsis; /* Add ellipsis for long titles */
 }
 
-.model-wrapper:hover .model-title {
-  overflow: visible;
-  position: relative;
-  z-index: 20;
-  color: var(--weird);
-  background: var(--darkest);
-}
-
 .model-subtitle {
   font-size: 0.8em;
   font-style: italic;
@@ -233,4 +225,21 @@ hr {
 
 .tooltip.left {
   transform: translateX(-100%);
+}
+
+.bar-header {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: var(--weird, #eeeeee);
+  text-align: center;
+}
+
+.bar-subheader {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--lightest);
+  text-align: center;
 }
