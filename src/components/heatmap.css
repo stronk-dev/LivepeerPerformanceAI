@@ -107,17 +107,79 @@
   z-index: 2;
 }
 
-.tooltip {
+.heatmap-tooltip {
   position: fixed;
-  background-color: var(--darkest);
-  color: var(--lighter);
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid var(--grey);
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  background-color: var(--darker);
+  color: var(--lighter, #ffffff);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--dark);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
   pointer-events: none;
   z-index: 10;
-  transition: opacity 0.3s ease, transform 0.2s ease;
+  width: 260px;
+  transform: translateY(10px) scale(0.95);
+  opacity: 0;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.9); /* Start slightly below and scaled */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1); /* End at normal position */
+  }
+}
+
+.heatmap-tooltip-header {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--weird, #eeeeee);
+  text-align: center;
+}
+
+.heatmap-tooltip-subheader {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--lightest, #eeeeee);
+  text-align: center;
+}
+
+.heatmap-tooltip-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Add spacing between items */
+}
+
+.heatmap-tooltip-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.heatmap-tooltip-row-label {
+  font-weight: bold;
+  color: var(--lightest, #bbbbbb); /* Slightly subdued color for labels */
+}
+
+.heatmap-tooltip-row-value {
+  color: var(--lighter, #ffffff);
+  text-align: right;
+}
+
+.heatmap-tooltip-divider {
+  height: 1px;
+  background-color: var(--grey); /* Divider line for separation */
+  margin: 8px 0;
+  opacity: 0.5;
 }
 
 .filters {

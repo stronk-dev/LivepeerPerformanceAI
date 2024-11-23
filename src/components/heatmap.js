@@ -15,7 +15,6 @@ const Heatmap = ({ rawData }) => {
     }
   });
 
-  // Group data by node and aggregate the scores for each unique combination
   const aggregatedData = data.reduce((acc, entry) => {
     const job = `${entry.pipeline}-${entry.model}`;
     const ethAddr = entry.node;
@@ -26,6 +25,8 @@ const Heatmap = ({ rawData }) => {
 
     if (!acc[ethAddr].combos[job]) {
       acc[ethAddr].combos[job] = {
+        model: entry.model,
+        pipeline: entry.pipeline,
         totalScore: 0,
         totalSuccessRate: 0,
         totalRoundTrip: 0,
@@ -43,7 +44,6 @@ const Heatmap = ({ rawData }) => {
     return acc;
   }, {});
 
-  // Calculate cumulative scores for sorting columns
   const comboScores = {};
   Object.values(aggregatedData).forEach(({ combos }) => {
     Object.entries(combos).forEach(([combo, { totalScore, count }]) => {
@@ -54,14 +54,15 @@ const Heatmap = ({ rawData }) => {
     });
   });
 
-  // Sort nodes by cumulative score
   const groupedData = Object.entries(aggregatedData)
     .map(([node, { combos, totalNodeScore }]) => ({
       node,
       totalNodeScore,
       combos: Object.entries(combos).map(
-        ([combo, { totalScore, totalRoundTrip, totalSuccessRate, count }]) => ({
+        ([combo, { totalScore, totalRoundTrip, totalSuccessRate, model, pipeline, count }]) => ({
           combo,
+          model: model,
+          pipeline: pipeline,
           totalScore: totalScore,
           averageScore: totalScore / count,
           averageSuccessRate: totalSuccessRate / count,
@@ -71,28 +72,36 @@ const Heatmap = ({ rawData }) => {
     }))
     .sort((a, b) => b.totalNodeScore - a.totalNodeScore);
 
-  // Sort unique combos by cumulative score
   const sortedCombos = Object.keys(uniqueCombos).sort(
     (a, b) => comboScores[b] - comboScores[a]
   );
 
-  // Hover event handlers
   const [hoverInfo, setHoverInfo] = useState(null);
 
   const handleMouseMove = (entry, e) => {
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const tooltipWidth = 260; // Estimated tooltip width
+    const tooltipHeight = 100; // Estimated tooltip height
+    let x = e.clientX + 15; // Default offset
+    let y = e.clientY + 15;
+
+    // Adjust for viewport boundaries
+    if (x + tooltipWidth > viewportWidth) x = viewportWidth - tooltipWidth - 15;
+    if (y + tooltipHeight > viewportHeight) y = viewportHeight - tooltipHeight - 15;
+
     setHoverInfo({
       ...entry,
-      x: e.clientX + 15, // Add offset to avoid overlapping cursor
-      y: e.clientY + 15,
+      x,
+      y,
     });
   };
 
   const handleMouseLeave = () => setHoverInfo(null);
 
-  // Color interpolation between #565f89 and #1a1b26 based on score
   const interpolateColor = (score) => {
-    const startColor = [86, 95, 137]; // RGB of #565f89
-    const endColor = [26, 27, 38]; // RGB of #1a1b26
+    const startColor = [86, 95, 137];
+    const endColor = [26, 27, 38];
     const r = Math.round(startColor[0] + (endColor[0] - startColor[0]) * score);
     const g = Math.round(startColor[1] + (endColor[1] - startColor[1]) * score);
     const b = Math.round(startColor[2] + (endColor[2] - startColor[2]) * score);
@@ -101,7 +110,6 @@ const Heatmap = ({ rawData }) => {
 
   return (
     <div className="heatmap-container">
-      {/* Heatmap Table */}
       <div className="heatmap-table-wrapper">
         <table className="heatmap-table">
           <thead>
@@ -120,13 +128,13 @@ const Heatmap = ({ rawData }) => {
                   const entry = combos.find((c) => c.combo === key);
                   const cellStyle = entry
                     ? {
-                        backgroundColor: interpolateColor(entry.averageScore),
-                      }
+                      backgroundColor: interpolateColor(entry.averageScore),
+                    }
                     : {
-                        backgroundColor: "#565f89",
-                        backgroundImage:
-                          "repeating-linear-gradient(45deg, #7a7a7a 0, #7a7a7a 1px, #565f89 1px, #565f89 4px)",
-                      };
+                      backgroundColor: "#565f89",
+                      backgroundImage:
+                        "repeating-linear-gradient(45deg, #7a7a7a 0, #7a7a7a 1px, #565f89 1px, #565f89 4px)",
+                    };
 
                   return (
                     <td
@@ -144,28 +152,41 @@ const Heatmap = ({ rawData }) => {
           </tbody>
         </table>
       </div>
-
-      {/* Tooltip */}
       {hoverInfo && (
         <div
-          className="tooltip"
+          className="heatmap-tooltip"
           style={{
             top: `${hoverInfo.y}px`,
             left: `${hoverInfo.x}px`,
           }}
         >
-          <p>
-            <strong>{hoverInfo.combo.replace("-", " (") + ")"}</strong>
-          </p>
-          <p>
-            <strong>Average Score:</strong> {hoverInfo.averageScore.toFixed(2)}
-          </p>
-          <p>
-            <strong>Average Success Rate:</strong> {hoverInfo.averageSuccessRate.toFixed(2)}
-          </p>
-          <p>
-            <strong>Average Round Trip:</strong> {hoverInfo.averageRoundTrip.toFixed(2)}
-          </p>
+          <div className="heatmap-tooltip-header">
+            <span>{hoverInfo.pipeline}</span>
+          </div>
+          <div className="heatmap-tooltip-subheader">
+            <span>{hoverInfo.model}</span>
+          </div>
+          <div className="heatmap-tooltip-divider"></div>
+          <div className="heatmap-tooltip-body">
+            <div className="heatmap-tooltip-row">
+              <span className="heatmap-tooltip-row-label">Average Score:</span>
+              <span className="heatmap-tooltip-row-value">
+                {hoverInfo.averageScore.toFixed(2)}
+              </span>
+            </div>
+            <div className="heatmap-tooltip-row">
+              <span className="heatmap-tooltip-row-label">Success Rate:</span>
+              <span className="heatmap-tooltip-row-value">
+                {hoverInfo.averageSuccessRate.toFixed(2)}
+              </span>
+            </div>
+            <div className="heatmap-tooltip-row">
+              <span className="heatmap-tooltip-row-label">Round Trip:</span>
+              <span className="heatmap-tooltip-row-value">
+                {hoverInfo.averageRoundTrip.toFixed(2)}
+              </span>
+            </div>
+          </div>
         </div>
       )}
     </div>

@@ -133,8 +133,8 @@
 
 .expanded-info {
   position: absolute;
-  top: 100%; /* Position just below the grid item */
-  margin-top: 0.5em;
+  top: 100%; /* Just below the grid item */
+  left: 0;
   background-color: var(--darkest);
   color: var(--lighter);
   padding: 1em;
@@ -142,11 +142,15 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   transform: translateY(-20px);
   opacity: 0;
-  height: 0;
-  max-height: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease, height 0.5s ease, max-height 0.5s ease; /* Slide, fade, and expand effect */
+  visibility: hidden; /* Prevent mouse interaction when hidden */
   z-index: 15;
-  overflow: visible;
+  transition: transform 0.2s ease, opacity 0.2s ease, visibility 0.2s;
+}
+
+.expanded-info.visible {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
 }
 
 .model-wrapper.hovered .expanded-info {
@@ -190,4 +194,30 @@ hr {
   height: 0.2em;
   border: none;
   background-color: var(--darker);
+}
+
+.tooltip {
+  position: absolute;
+  background-color: var(--darkest);
+  color: var(--lighter);
+  padding: 0.5em;
+  border-radius: 0.2em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+  z-index: 9999;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tooltip.visible {
+  opacity: 1;
+}
+
+.tooltip.top {
+  transform: translateY(-100%);
+}
+
+.tooltip.left {
+  transform: translateX(-100%);
 }
