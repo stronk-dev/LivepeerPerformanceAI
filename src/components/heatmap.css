@@ -163,7 +163,6 @@
 .heatmap-tooltip-body {
   display: flex;
   flex-direction: column;
-  gap: 8px; /* Add spacing between items */
 }
 
 .heatmap-tooltip-row {

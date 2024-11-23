@@ -167,7 +167,7 @@ const Heatmap = ({ data }) => {
           </div>
           <div className="heatmap-tooltip-row">
             <span className="heatmap-tooltip-row-label">Score:</span>
-            <span className="heatmap-tooltip-row-value">
+            <span className="heatmap-tooltip-row-value" style={{color: "var(--lightest)"}}>
               {(hoverInfo.averageScore * 100).toFixed(0)}%
             </span>
           </div>
@@ -183,7 +183,7 @@ const Heatmap = ({ data }) => {
           <div className="heatmap-tooltip-body">
             <div className="heatmap-tooltip-row">
               <span className="heatmap-tooltip-row-label">Success Rate:</span>
-              <span className="heatmap-tooltip-row-value">
+              <span className="heatmap-tooltip-row-value" style={{color: "var(--lightest)"}}>
                 {(hoverInfo.totalSuccessRate / hoverInfo.count * 100).toFixed(0)}%
               </span>
             </div>
@@ -197,7 +197,7 @@ const Heatmap = ({ data }) => {
             ))}
             <div className="heatmap-tooltip-row">
               <span className="heatmap-tooltip-row-label">Round Trip:</span>
-              <span className="heatmap-tooltip-row-value">
+              <span className="heatmap-tooltip-row-value" style={{color: "var(--lightest)"}}>
                 {(hoverInfo.totalRoundTrip / hoverInfo.count * 100).toFixed(0)}%
               </span>
             </div>
