@@ -103,33 +103,33 @@ const Bar = ({ model, metrics }) => {
           style={tooltipStyle}
         >
           <div className="expanded-info-row">
-            <span className="expanded-info-key">Total Score:</span>
+            <span className="expanded-info-key">Total score:</span>
             <span className="expanded-info-value" style={{ color: totalScoreColor }}>
               {(totalScoreValue * 100).toFixed(0)}%
             </span>
           </div>
           <hr />
           <div className="expanded-info-row">
-            <span className="expanded-info-key">Round Trip Score:</span>
+            <span className="expanded-info-key">Roundtrip score:</span>
             <span className="expanded-info-value" style={{ color: roundTripColor }}>
               {(roundTripScore * 100).toFixed(0)}%
             </span>
           </div>
           <div className="expanded-info-row">
-            <span className="expanded-info-key">Success Rate Score:</span>
+            <span className="expanded-info-key">Success rate score:</span>
             <span className="expanded-info-value" style={{ color: successColor }}>
               {(successRateScore * 100).toFixed(0)}%
             </span>
           </div>
           <div className="expanded-info-row">
-            <span className="expanded-info-key">Redundancy Score:</span>
+            <span className="expanded-info-key">Good nodes score:</span>
             <span className="expanded-info-value" style={{ color: redundancyColor }}>
               {(redundancyScore * 100).toFixed(0)}%
             </span>
           </div>
-          {Object.keys(nodes).map((node, index) => (
-            <div key={`${node}-${index}`} className="expanded-info-row-smoll">
-              {node}
+          {Array.from(goodNodes, value => (
+            <div key={`${value}-val}`} className="expanded-info-row-smoll">
+              {value}
             </div>
           ))}
         </div>
