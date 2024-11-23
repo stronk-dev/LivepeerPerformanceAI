@@ -185,8 +185,15 @@
 
 .heatmap-tooltip-divider {
   height: 1px;
-  background-color: var(--grey); /* Divider line for separation */
+  background-color: var(--grey);
   margin: 8px 0;
+  opacity: 0.5;
+}
+
+.heatmap-tooltip-mini-divider {
+  height: 1px;
+  background-color: var(--grey);
+  margin: 0;
   opacity: 0.5;
 }
 
