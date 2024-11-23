@@ -31,6 +31,7 @@ const Heatmap = ({ rawData }) => {
         pipeline: entry.pipeline,
         ethAddr: ethAddr,
         totalScore: 0,
+        scoreResults: [],
         totalSuccessRate: 0,
         successResults: [],
         totalRoundTrip: 0,
@@ -40,6 +41,7 @@ const Heatmap = ({ rawData }) => {
     }
 
     acc[ethAddr].combos[job].totalScore += entry.score;
+    acc[ethAddr].combos[job].scoreResults.push({ region: entry.region, value: entry.score });
     acc[ethAddr].combos[job].totalSuccessRate += entry.success_rate;
     acc[ethAddr].combos[job].successResults.push({ region: entry.region, value: entry.success_rate });
     acc[ethAddr].combos[job].totalRoundTrip += entry.round_trip_score;
@@ -66,12 +68,13 @@ const Heatmap = ({ rawData }) => {
       node,
       totalNodeScore,
       combos: Object.entries(combos).map(
-        ([combo, { totalScore, totalRoundTrip, totalSuccessRate, model, ethAddr, pipeline, count, successResults, roundTripResults }]) => ({
+        ([combo, { totalScore, totalRoundTrip, totalSuccessRate, model, ethAddr, pipeline, count, successResults, roundTripResults, scoreResults }]) => ({
           combo,
           ethAddr: ethAddr,
           model: model,
           pipeline: pipeline,
           totalScore: totalScore,
+          scoreResults: scoreResults,
           successResults: successResults,
           roundTripResults: roundTripResults,
           averageScore: totalScore / count,
@@ -191,6 +194,14 @@ const Heatmap = ({ rawData }) => {
               {hoverInfo.averageScore.toFixed(2) * 100}%
             </span>
           </div>
+            {hoverInfo.scoreResults.map((obj, idx) => (
+              <div className="heatmap-tooltip-row" key={"score" + obj.value + idx}>
+                <span className="heatmap-tooltip-row-label" style={{ fontSize: "10px", fontWeight: "normal" }}>{obj.region}</span>
+                <span className="heatmap-tooltip-row-value" style={{ fontSize: "10px", fontWeight: "normal" }}>
+                  {obj.value.toFixed(2) * 100}%
+                </span>
+              </div>
+            ))}
           <div className="heatmap-tooltip-divider" />
           <div className="heatmap-tooltip-body">
             <div className="heatmap-tooltip-row">
