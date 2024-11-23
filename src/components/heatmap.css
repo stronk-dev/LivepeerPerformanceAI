@@ -41,6 +41,7 @@
   text-align: center;
   width: 100px;
   height: 40px;
+  padding: 0.4em;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -175,11 +176,11 @@
 
 .heatmap-tooltip-row-label {
   font-weight: bold;
-  color: var(--lightest, #bbbbbb); /* Slightly subdued color for labels */
+  color: var(--lightest);
 }
 
 .heatmap-tooltip-row-value {
-  color: var(--lighter, #ffffff);
+  color: var(--lighter);
   text-align: right;
 }
 

@@ -1,55 +1,21 @@
 import React, { useState, useEffect } from "react";
 import "./healthbar.css";
 
-const parseAPIData = (rawData) => {
-  const modelMetrics = {};
+const Bar = ({ model, metrics }) => {
+  const {
+    totalSuccessRate = 0,
+    totalRoundTrip = 0,
+    count = 1,
+    nodes = {},
+  } = metrics;
 
-  rawData.data.forEach(({ model, node, success_rate, round_trip_score, score }) => {
-    if (!modelMetrics[model]) modelMetrics[model] = {};
-    if (!modelMetrics[model][node]) modelMetrics[model][node] = [];
-    modelMetrics[model][node].push({ success_rate, round_trip_score, score });
-  });
+  // Calculate averages safely
+  const averageSuccessRate = totalSuccessRate / count || 0;
+  const averageRoundTrip = totalRoundTrip / count || 0;
 
-  return Object.entries(modelMetrics).map(([model, nodes]) => {
-    const modelNodes = [];
-    const deduplicatedNodes = Object.entries(nodes).map(([node, tests]) => {
-      const avg = (key) => tests.reduce((sum, test) => sum + test[key], 0) / tests.length;
-      if (avg("success_rate") > 0.80 && avg("round_trip_score") > 0.75) {
-        modelNodes.push(node);
-      }
-      return {
-        node,
-        averageSuccessRate: avg("success_rate"),
-        averageRoundTrip: avg("round_trip_score"),
-        averageScore: avg("score"),
-      };
-    });
-
-    const avg = (key) =>
-      deduplicatedNodes.reduce((sum, node) => sum + node[key], 0) / deduplicatedNodes.length;
-
-    const redundancy = deduplicatedNodes.filter(
-      (node) =>
-        node.averageSuccessRate > 0.80 &&
-        node.averageRoundTrip > 0.75
-    ).length;
-
-    return {
-      model,
-      nodes: deduplicatedNodes.length,
-      performingNodes: redundancy,
-      averageSuccessRate: avg("averageSuccessRate"),
-      averageRoundTrip: avg("averageRoundTrip"),
-      averageScore: avg("averageScore"),
-      modelNodes: modelNodes,
-    };
-  }).sort((a, b) => b.nodes - a.nodes);
-};
-
-const Bar = ({ model, nodes, averageSuccessRate, averageRoundTrip, averageScore, performingNodes, modelNodes }) => {
-  const [hovered, setIsHovered] = useState(false);
+  const [hovered, setHovered] = useState(false);
   const [tooltipStyle, setTooltipStyle] = useState({});
-  const [tooltipVisible, setTooltipVisible] = useState(false); // Manage tooltip visibility
+  const [tooltipVisible, setTooltipVisible] = useState(false);
   const [rotationDegree, setRotationDegree] = useState(() => {
     const currentTime = new Date().getTime();
     return (currentTime / 500) % 360;
@@ -96,23 +62,25 @@ const Bar = ({ model, nodes, averageSuccessRate, averageRoundTrip, averageScore,
 
     setTooltipStyle(newStyle);
     setTooltipVisible(true);
-    setIsHovered(true);
+    setHovered(true);
   };
 
   const handleMouseLeave = () => {
-    setTooltipVisible(false); // Hide immediately
-    setTimeout(() => setIsHovered(false), 200); // Allow fade-out
+    setTooltipVisible(false);
+    setTimeout(() => setHovered(false), 200);
     setTooltipStyle({});
   };
 
+  
   const roundTripScore = averageRoundTrip;
   const roundTripColor = `rgba(${calculateColor(roundTripScore)}, 1)`;
   const successRateScore = averageSuccessRate * averageSuccessRate;
   const successColor = `rgba(${calculateColor(successRateScore)}, 1)`;
-  const redundancyScore = Math.max(0, Math.min(1, performingNodes * 0.2));
+  const goodNodes = getGoodNodes(nodes);
+  const redundancyScore = Math.max(0, Math.min(1, goodNodes.size * 0.2));
   const redundancyColor = `rgba(${calculateColor(redundancyScore)}, 1)`;
-  const totalScore = (roundTripScore + successRateScore + redundancyScore) / 3;
-  const totalScoreColor = `rgba(${calculateColor(totalScore)}, 1)`;
+  const totalScoreValue = (roundTripScore + successRateScore + redundancyScore) / 3;
+  const totalScoreColor = `rgba(${calculateColor(totalScoreValue)}, 1)`;
 
   // Gradient colors
   const defaultGradient = `linear-gradient(to right, ${redundancyColor}, ${successColor}, ${roundTripColor})`;
@@ -121,7 +89,7 @@ const Bar = ({ model, nodes, averageSuccessRate, averageRoundTrip, averageScore,
   return (
     <div
       className={`model-wrapper ${hovered ? 'hovered' : ''}`}
-      style={{ '--gradient-border': rotatingGradient }} // Apply rotating gradient
+      style={{ '--gradient-border': rotatingGradient }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -129,7 +97,7 @@ const Bar = ({ model, nodes, averageSuccessRate, averageRoundTrip, averageScore,
         <div className="model-title-container">
           <div className="model-title">{model}</div>
         </div>
-        <div className="model-subtitle">Good Nodes: {performingNodes}</div>
+        <div className="model-subtitle">Good Nodes: {goodNodes.size}</div>
         <div
           className={`expanded-info tooltip ${tooltipVisible ? 'visible' : ''}`}
           style={tooltipStyle}
@@ -137,32 +105,32 @@ const Bar = ({ model, nodes, averageSuccessRate, averageRoundTrip, averageScore,
           <div className="expanded-info-row">
             <span className="expanded-info-key">Total Score:</span>
             <span className="expanded-info-value" style={{ color: totalScoreColor }}>
-              {(totalScore * 100).toFixed(0)}%
+              {(totalScoreValue * 100).toFixed(0)}%
             </span>
           </div>
           <hr />
           <div className="expanded-info-row">
-            <span className="expanded-info-key">Roundtrip score:</span>
+            <span className="expanded-info-key">Round Trip Score:</span>
             <span className="expanded-info-value" style={{ color: roundTripColor }}>
               {(roundTripScore * 100).toFixed(0)}%
             </span>
           </div>
           <div className="expanded-info-row">
-            <span className="expanded-info-key">Success Rate score:</span>
+            <span className="expanded-info-key">Success Rate Score:</span>
             <span className="expanded-info-value" style={{ color: successColor }}>
               {(successRateScore * 100).toFixed(0)}%
             </span>
           </div>
           <div className="expanded-info-row">
-            <span className="expanded-info-key">Good nodes:</span>
+            <span className="expanded-info-key">Redundancy Score:</span>
             <span className="expanded-info-value" style={{ color: redundancyColor }}>
               {(redundancyScore * 100).toFixed(0)}%
             </span>
           </div>
-          {modelNodes.map((val) => (
-            <span className="expanded-info-row" key={val + model + "stat"}>
-              {val}
-            </span>
+          {Object.keys(nodes).map((node, index) => (
+            <div key={`${node}-${index}`} className="expanded-info-row-smoll">
+              {node}
+            </div>
           ))}
         </div>
       </div>
@@ -170,27 +138,53 @@ const Bar = ({ model, nodes, averageSuccessRate, averageRoundTrip, averageScore,
   );
 };
 
-const HealthBar = ({ rawData }) => {
-  const processedData = parseAPIData(rawData);
+const HealthBar = ({ data, isLoading, isError }) => {
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (isError) {
+    return <div>Error loading data.</div>;
+  }
+
+  if (!data || Object.keys(data).length === 0) {
+    return <div>No data available.</div>;
+  }
+
+  // Sort models by total score in descending order
+  const sortedData = Object.entries(data).sort(
+    ([, aData], [, bData]) => {
+      return bData.totalScore - aData.totalScore;
+    }
+  );
 
   return (
     <div className="health-bar-container">
-      {processedData.map(
-        ({ model, nodes, averageSuccessRate, averageRoundTrip, performingNodes, averageScore, modelNodes }, i) => (
-          <Bar
-            key={model + i}
-            model={model}
-            nodes={nodes}
-            averageRoundTrip={averageRoundTrip}
-            performingNodes={performingNodes}
-            averageScore={averageScore}
-            averageSuccessRate={averageSuccessRate}
-            modelNodes={modelNodes}
-          />
-        )
-      )}
+      {sortedData.map(([job, modelData], index) => (
+        <Bar
+          key={`${job}-${index}`}
+          model={modelData.model}
+          metrics={modelData}
+        />
+      ))}
     </div>
   );
+};
+
+// Function to deduplicate and count good nodes
+const getGoodNodes = (nodes) => {
+  const uniqueGoodNodes = new Set();
+
+  Object.entries(nodes).forEach(([node, metrics]) => {
+    const avgSuccessRate = metrics.totalSuccessRate / metrics.count || 0;
+    const avgRoundTrip = metrics.totalRoundTrip / metrics.count || 0;
+
+    if (avgSuccessRate > 0.8 && avgRoundTrip > 0.75) {
+      uniqueGoodNodes.add(node);
+    }
+  });
+
+  return uniqueGoodNodes;
 };
 
 export default HealthBar;

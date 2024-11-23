@@ -1,99 +1,52 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import "./heatmap.css";
 
-const Heatmap = ({ rawData }) => {
+const Heatmap = ({ data }) => {
   const [hoverInfo, setHoverInfo] = useState(null);
   const tooltipRef = useRef(null);
-  const data = rawData.data;
-  const uniqueCombos = {};
 
-  // Extract unique pipeline + model combinations from the data
-  data.forEach((entry) => {
-    if (!uniqueCombos[`${entry.pipeline}-${entry.model}`]) {
-      uniqueCombos[`${entry.pipeline}-${entry.model}`] = {
-        short: entry.model,
-        long: `${entry.model} (${entry.pipeline})`,
-      };
+  if (!data) {
+    return <div>Loading heatmap...</div>;
+  }
+
+  // Calculate cumulative scores for sorting models (combos)
+  const comboScores = {};
+  Object.entries(data).forEach(([job, { totalScore, model, pipeline }]) => {
+    if (!comboScores[job]) {
+      comboScores[job] = { totalScore: 0, model, pipeline };
     }
+    comboScores[job].totalScore += totalScore;
   });
 
-  const aggregatedData = data.reduce((acc, entry) => {
-    const job = `${entry.pipeline}-${entry.model}`;
-    const ethAddr = entry.node;
+  // Sort model-pipeline combos by their cumulative impact (total score)
+  const sortedCombos = Object.keys(comboScores).sort((a, b) => {
+    const totalScoreA = comboScores[a].totalScore;
+    const totalScoreB = comboScores[b].totalScore;
+    return totalScoreB - totalScoreA; // Sort in descending order of total cumulative score
+  });
 
-    if (!acc[ethAddr]) {
-      acc[ethAddr] = { totalNodeScore: 0, combos: {} };
-    }
-
-    if (!acc[ethAddr].combos[job]) {
-      acc[ethAddr].combos[job] = {
-        model: entry.model,
-        pipeline: entry.pipeline,
-        ethAddr: ethAddr,
-        totalScore: 0,
-        scoreResults: [],
-        totalSuccessRate: 0,
-        successResults: [],
-        totalRoundTrip: 0,
-        roundTripResults: [],
-        count: 0,
-      };
-    }
-
-    acc[ethAddr].combos[job].totalScore += entry.score;
-    acc[ethAddr].combos[job].scoreResults.push({ region: entry.region, value: entry.score });
-    acc[ethAddr].combos[job].totalSuccessRate += entry.success_rate;
-    acc[ethAddr].combos[job].successResults.push({ region: entry.region, value: entry.success_rate });
-    acc[ethAddr].combos[job].totalRoundTrip += entry.round_trip_score;
-    acc[ethAddr].combos[job].roundTripResults.push({ region: entry.region, value: entry.round_trip_score });
-    acc[ethAddr].combos[job].count += 1;
-
-    acc[ethAddr].totalNodeScore += entry.score;
-
-    return acc;
-  }, {});
-
-  const comboScores = {};
-  Object.values(aggregatedData).forEach(({ combos }) => {
-    Object.entries(combos).forEach(([combo, { totalScore, count }]) => {
-      if (!comboScores[combo]) {
-        comboScores[combo] = 0;
+  // Sort nodes by their total cumulative score
+  const nodeScores = {};
+  Object.entries(data).forEach(([job, { nodes }]) => {
+    Object.entries(nodes).forEach(([node, { totalSuccessRate, totalRoundTrip }]) => {
+      if (!nodeScores[node]) {
+        nodeScores[node] = { totalScore: 0 };
       }
-      comboScores[combo] += totalScore / count;
+      nodeScores[node].totalScore += totalSuccessRate + totalRoundTrip;
     });
   });
 
-  const groupedData = Object.entries(aggregatedData)
-    .map(([node, { combos, totalNodeScore }]) => ({
-      node,
-      totalNodeScore,
-      combos: Object.entries(combos).map(
-        ([combo, { totalScore, totalRoundTrip, totalSuccessRate, model, ethAddr, pipeline, count, successResults, roundTripResults, scoreResults }]) => ({
-          combo,
-          ethAddr: ethAddr,
-          model: model,
-          pipeline: pipeline,
-          totalScore: totalScore,
-          scoreResults: scoreResults,
-          successResults: successResults,
-          roundTripResults: roundTripResults,
-          averageScore: totalScore / count,
-          averageSuccessRate: totalSuccessRate / count,
-          averageRoundTrip: totalRoundTrip / count,
-        })
-      ),
-    }))
-    .sort((a, b) => b.totalNodeScore - a.totalNodeScore);
+  const sortedNodes = Object.keys(nodeScores).sort((a, b) => {
+    const totalScoreA = nodeScores[a].totalScore;
+    const totalScoreB = nodeScores[b].totalScore;
+    return totalScoreB - totalScoreA; // Sort in descending order of total cumulative score
+  });
 
-  const sortedCombos = Object.keys(uniqueCombos).sort(
-    (a, b) => comboScores[b] - comboScores[a]
-  );
-
-  const handleMouseMove = (entry, e) => {
+  const handleMouseMove = (entry, e, node) => {
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
-    var tooltipWidth = 260; // Default as fallback
-    var tooltipHeight = 100; // Default as fallback
+    let tooltipWidth = 260; // Default tooltip width
+    let tooltipHeight = 100; // Default tooltip height
 
     let x = e.clientX + 15; // Default offset
     let y = e.clientY + 15;
@@ -110,6 +63,7 @@ const Heatmap = ({ rawData }) => {
 
     setHoverInfo({
       ...entry,
+      node,
       x,
       y,
     });
@@ -133,20 +87,24 @@ const Heatmap = ({ rawData }) => {
           <thead>
             <tr>
               <th>Node</th>
-              {sortedCombos.map((key) => (
-                <th key={key}><span>{uniqueCombos[key].short}</span></th>
+              {sortedCombos.map((job) => (
+                <th key={job}>
+                  <span>{comboScores[job].model}</span>
+                </th>
               ))}
             </tr>
           </thead>
           <tbody>
-            {groupedData.map(({ node, combos }) => (
+            {sortedNodes.map((node) => (
               <tr key={node}>
                 <td className="sticky-node"><span>{node}</span></td>
-                {sortedCombos.map((key) => {
-                  const entry = combos.find((c) => c.combo === key);
+                {sortedCombos.map((job) => {
+                  const entry = data[job].nodes[node];
+                  const averageScore = entry && entry.count > 0 ? entry.totalScore / entry.count : 0;
+
                   const cellStyle = entry
                     ? {
-                      backgroundColor: interpolateColor(entry.averageScore),
+                      backgroundColor: interpolateColor(averageScore),
                     }
                     : {
                       backgroundColor: "#565f89",
@@ -156,12 +114,31 @@ const Heatmap = ({ rawData }) => {
 
                   return (
                     <td
-                      key={`${node}-${key}`}
+                      key={`${node}-${job}`}
                       style={cellStyle}
-                      onMouseMove={(e) => entry && handleMouseMove(entry, e)}
+                      onMouseMove={(e) =>
+                        entry &&
+                        handleMouseMove(
+                          {
+                            ...entry,
+                            job,
+                            model: comboScores[job].model,
+                            pipeline: comboScores[job].pipeline,
+                            scoreResults: entry.scoreResults,
+                            successResults: entry.successResults,
+                            roundTripResults: entry.roundTripResults,
+                            averageScore,
+                            totalSuccessRate: entry.totalSuccessRate,
+                            totalRoundTrip: entry.totalRoundTrip,
+                            count: entry.count,
+                          },
+                          e,
+                          node
+                        )
+                      }
                       onMouseLeave={handleMouseLeave}
                     >
-                      {entry?.averageScore ? `${(entry.averageScore * 100).toFixed(0)}%` : ""}
+                      {entry && entry.count > 0 && averageScore > 0 ? `${(averageScore * 100).toFixed(0)}%` : ""}
                     </td>
                   );
                 })}
@@ -186,49 +163,49 @@ const Heatmap = ({ rawData }) => {
             <span>{hoverInfo.model}</span>
           </div>
           <div className="heatmap-tooltip-subsubheader">
-            <span>{hoverInfo.ethAddr}</span>
+            <span>{hoverInfo.node}</span>
           </div>
           <div className="heatmap-tooltip-row">
             <span className="heatmap-tooltip-row-label">Score:</span>
             <span className="heatmap-tooltip-row-value">
-              {hoverInfo.averageScore.toFixed(2) * 100}%
+              {(hoverInfo.averageScore * 100).toFixed(0)}%
             </span>
           </div>
-            {hoverInfo.scoreResults.map((obj, idx) => (
-              <div className="heatmap-tooltip-row" key={"score" + obj.value + idx}>
-                <span className="heatmap-tooltip-row-label" style={{ fontSize: "10px", fontWeight: "normal" }}>{obj.region}</span>
-                <span className="heatmap-tooltip-row-value" style={{ fontSize: "10px", fontWeight: "normal" }}>
-                  {obj.value.toFixed(2) * 100}%
-                </span>
-              </div>
-            ))}
+          {hoverInfo.scoreResults && hoverInfo.scoreResults.map((obj, idx) => (
+            <div className="heatmap-tooltip-row" key={"score" + obj.region + idx}>
+              <span className="heatmap-tooltip-row-label" style={{ fontSize: "10px", fontWeight: "normal" }}>{obj.region}</span>
+              <span className="heatmap-tooltip-row-value" style={{ fontSize: "10px", fontWeight: "normal" }}>
+                {(obj.value * 100).toFixed(0)}%
+              </span>
+            </div>
+          ))}
           <div className="heatmap-tooltip-divider" />
           <div className="heatmap-tooltip-body">
             <div className="heatmap-tooltip-row">
               <span className="heatmap-tooltip-row-label">Success Rate:</span>
               <span className="heatmap-tooltip-row-value">
-                {hoverInfo.averageSuccessRate.toFixed(2) * 100}%
+                {(hoverInfo.totalSuccessRate / hoverInfo.count * 100).toFixed(0)}%
               </span>
             </div>
-            {hoverInfo.successResults.map((obj, idx) => (
-              <div className="heatmap-tooltip-row" key={"successrate" + obj.value + idx}>
+            {hoverInfo.successResults && hoverInfo.successResults.map((obj, idx) => (
+              <div className="heatmap-tooltip-row" key={"successrate" + obj.region + idx}>
                 <span className="heatmap-tooltip-row-label" style={{ fontSize: "10px", fontWeight: "normal" }}>{obj.region}</span>
                 <span className="heatmap-tooltip-row-value" style={{ fontSize: "10px", fontWeight: "normal" }}>
-                  {obj.value.toFixed(2) * 100}%
+                  {(obj.value * 100).toFixed(0)}%
                 </span>
               </div>
             ))}
             <div className="heatmap-tooltip-row">
               <span className="heatmap-tooltip-row-label">Round Trip:</span>
               <span className="heatmap-tooltip-row-value">
-                {hoverInfo.averageRoundTrip.toFixed(2) * 100}%
+                {(hoverInfo.totalRoundTrip / hoverInfo.count * 100).toFixed(0)}%
               </span>
             </div>
-            {hoverInfo.roundTripResults.map((obj, idx) => (
-              <div className="heatmap-tooltip-row" key={"roundtrip" + obj.value + idx}>
+            {hoverInfo.roundTripResults && hoverInfo.roundTripResults.map((obj, idx) => (
+              <div className="heatmap-tooltip-row" key={"roundtrip" + obj.region + idx}>
                 <span className="heatmap-tooltip-row-label" style={{ fontSize: "10px", fontWeight: "normal" }}>{obj.region}</span>
                 <span className="heatmap-tooltip-row-value" style={{ fontSize: "10px", fontWeight: "normal" }}>
-                  {obj.value.toFixed(2) * 100}%
+                  {(obj.value * 100).toFixed(0)}%
                 </span>
               </div>
             ))}

@@ -167,6 +167,18 @@
   padding: 0.3em 0;
 }
 
+.expanded-info-row-smoll {
+  display: flex;
+  width: 100%;
+  font-size: 10px;
+  font-weight: bold;
+  margin: 5px;
+  color: var(--light);
+  text-align: center;
+  justify-content: center;
+  font-family: monospace;
+}
+
 .expanded-info-key {
   font-weight: bold;
   text-align: left;
@@ -208,6 +220,7 @@ hr {
   transition: opacity 0.3s ease, transform 0.3s ease;
   opacity: 0;
   pointer-events: none;
+  min-width: 250px;
 }
 
 .tooltip.visible {
